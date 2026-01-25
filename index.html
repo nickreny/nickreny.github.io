@@ -2,36 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Bridge Systems</title>
+  <title>Nick Reny Engineering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navigation Bar with Buttons -->
-<nav>
-  <a href="index.html" class="nav-button">Home</a>
-  <a href="services.html" class="nav-button">Services</a>
-  <a href="contact.html" class="nav-button">Contact</a>
-</nav>
-<hr>
+<!-- Navigation -->
+<header class="header">
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Nick Reny Engineering</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
 
-<!-- Page Content -->
-<h1>Welcome to Nick Reny Engineering</h1>
-<p>
-We provide hands-on engineering solutions for manufacturing, automation, and custom tooling.  
-Whether you need custom fixtures, alignment systems, or process optimization, we help make your production flow more efficient and reliable.
-</p>
+<!-- Hero Section -->
+<section class="hero">
+  <img src="assets/hero.jpg" alt="Custom tooling and automation" class="hero-img">
+  <div class="hero-text">
+    <h1>Hands‑On Engineering for Manufacturing & Automation</h1>
+    <p>Custom tooling, automation systems, and process solutions that make your production better.</p>
+    <a href="contact.html" class="btn-primary">Get in Touch</a>
+  </div>
+</section>
 
-<div class="section">
-  <h2>Why Choose Us?</h2>
+<!-- Services (Feature Blocks) -->
+<section class="services-overview">
+  <h2>Our Core Capabilities</h2>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <img src="assets/cylindrical-tooling.jpg" alt="Custom Tooling">
+      <h3>Custom Tooling</h3>
+      <p>Precision fixtures and alignment systems built for your specific operations.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="assets/machine-sensor-integration.jpg" alt="Automation Integration">
+      <h3>Automation Integration</h3>
+      <p>Seamless mechanical and sensor integration for smarter machines.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="assets/lab-layout.jpg" alt="Facility Optimization">
+      <h3>Facility Optimization</h3>
+      <p>Process and facility layout improvements to streamline workflow.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-us">
+  <h2>Why Choose Nick Reny Engineering</h2>
+  <p>We bring practical experience and tailored solutions to every project:</p>
   <ul>
-    <li>Experienced in steel rule die tooling and alignment boards</li>
+    <li>Expertise in tooling and alignment systems</li>
     <li>Custom automation and counting systems</li>
-    <li>Vendor coordination and equipment integration expertise</li>
-    <li>Process and facility layout design</li>
+    <li>Vendor coordination and equipment integration</li>
+    <li>Production process optimization</li>
   </ul>
-</div>
+</section>
+
+<!-- Portfolio / Project Images -->
+<section class="portfolio">
+  <h2>What We’ve Built</h2>
+  <div class="portfolio-grid">
+    <img src="assets/poke-yoke-steel-rule-die-alignment.jpg" alt="Die alignment tooling">
+    <img src="assets/lab-custom-gas-piping.jpg" alt="Lab gas piping system">
+    <img src="assets/automated-4probe-resistance-assembly.jpg" alt="Automated assembly setup">
+    <img src="assets/custom-dual-manifold.jpg" alt="Custom dual manifold tooling">
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2026 Nick Reny Engineering</p>
+  <p><a href="contact.html">Contact Us</a></p>
+</footer>
 
 </body>
 </html>
