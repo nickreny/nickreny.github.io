@@ -53,41 +53,38 @@ header, nav {
 --------------------------------*/
 .hero-dual {
   position: relative;
-  text-align: center;
   margin-bottom: 50px;
 }
 
 .hero-dual-imgs {
   display: flex;
   gap: 10px;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
 .hero-dual-imgs .hero-img {
   width: 48%;
-  max-height: 400px;
-  object-fit: cover;
   border-radius: 10px;
+  object-fit: cover;
+  max-height: 400px;
 }
 
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.hero-text-overlay {
+  position: relative;
+  text-align: center;
+  margin-top: -200px; /* Pull up overlay above images */
+  color: white;
   background: rgba(0,0,0,0.5);
   padding: 30px 50px;
   border-radius: 10px;
-  color: white;
 }
 
-.hero-text h1 {
+.hero-text-overlay h1 {
   font-size: 2.5em;
   margin-bottom: 15px;
 }
 
-.hero-text p {
+.hero-text-overlay p {
   font-size: 1.2em;
   margin-bottom: 20px;
 }
@@ -245,11 +242,16 @@ footer a:hover {
     max-height: 300px;
   }
 
-  .hero-text h1 {
+  .hero-text-overlay {
+    margin-top: -150px; /* adjust overlay on small screens */
+    padding: 20px;
+  }
+
+  .hero-text-overlay h1 {
     font-size: 1.8em;
   }
 
-  .hero-text p {
+  .hero-text-overlay p {
     font-size: 1em;
   }
 
