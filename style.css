@@ -10,7 +10,6 @@ body {
   background-color: #f8f8f8;
 }
 
-/* Container for centered content */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -44,7 +43,6 @@ header, nav {
   color: #ffd700;
 }
 
-/* Logo */
 .nav-logo {
   font-size: 1.5em;
   font-weight: bold;
@@ -107,9 +105,15 @@ h1, h2, h3 {
   color: #004999;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
 h2 {
   margin-top: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -138,6 +142,7 @@ h2 {
 
 .service-card h3 {
   margin: 15px;
+  font-size: 1.2em;
 }
 
 .service-card p {
@@ -181,6 +186,33 @@ h2 {
 }
 
 /* ------------------------------
+   Contact Section
+--------------------------------*/
+.contact-section {
+  background-color: #fff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contact-section p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.contact-section a {
+  color: #004999;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------
    Footer
 --------------------------------*/
 footer {
@@ -200,7 +232,7 @@ footer a:hover {
 }
 
 /* ------------------------------
-   Responsive adjustments
+   Responsive Adjustments
 --------------------------------*/
 @media screen and (max-width: 768px) {
   .hero-text h1 {
@@ -209,5 +241,9 @@ footer a:hover {
 
   .hero-text p {
     font-size: 1em;
+  }
+
+  .nav a {
+    margin-left: 10px;
   }
 }
