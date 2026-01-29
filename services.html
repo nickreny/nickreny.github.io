@@ -8,96 +8,114 @@
 </head>
 <body>
 
-<header>
-  <div class="nav container">
-    <div class="nav-logo">Engineering & Automation Consulting</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+<header class="site-header">
+  <h1>Services</h1>
+  <p>Engineering solutions from concept to implementation</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<main class="container">
+<main>
 
-  <section>
-    <h2>Our Services</h2>
-    <p>Services are focused on practical, manufacturable solutions. Engagements range from individual tooling designs to full system integration and vendor coordination.</p>
+<section class="services-intro">
+  <p>
+    Services are focused on practical, manufacturable solutions.
+    Engagements range from individual tooling designs to full
+    system integration and vendor coordination.
+  </p>
+</section>
 
-    <div class="services-grid">
+<ul class="services-list">
 
-      <!-- Tooling -->
-      <div class="service-card" data-title="12-Output Argon Manifold" data-description="Custom 12-output argon manifold for controlled gas delivery in lab and manufacturing setups." data-images='["assets/images/tooling/12output-manifold.png","assets/images/tooling/12-ouput-argon-manifold-real.jpeg"]'>
-        <img src="assets/images/tooling/12output-manifold.png" alt="12 Output Argon Manifold CAD">
-        <h3>12-Output Argon Manifold</h3>
-      </div>
-
-      <div class="service-card" data-title="6-Output Air Manifold" data-description="Custom 6-output air manifold for precise distribution in pneumatic systems." data-images='["assets/images/tooling/6-output-airmanifold1-real.jpeg","assets/images/tooling/6-output-airmanifold2-real.jpeg"]'>
-        <img src="assets/images/tooling/6-output-airmanifold1-real.jpeg" alt="6 Output Air Manifold Real">
-        <h3>6-Output Air Manifold</h3>
-      </div>
-
-      <!-- Automation -->
-      <div class="service-card" data-title="Laser Welding Cobot System" data-description="Custom laser welding cobot system for automated precision assembly." data-images='["assets/images/automation/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg"]'>
-        <img src="assets/images/automation/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg" alt="Laser Cobot System Real">
-        <h3>Laser Welding Cobot System</h3>
-      </div>
-
-      <div class="service-card" data-title="Automated Probe Press" data-description="Automated press system for controlled probe insertion and precision assembly." data-images='["assets/images/automation/finalized-probe-pressmachine-real.jpeg"]'>
-        <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" alt="Automated Probe Press Real">
-        <h3>Automated Probe Press</h3>
-      </div>
-
-      <!-- Equipment -->
-      <div class="service-card" data-title="Precision Calibration Stand" data-description="Precision calibration stand with granite slab for accurate measurement systems." data-images='["assets/images/equipment/calibration-stand-cad.png","assets/images/equipment/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg"]'>
-        <img src="assets/images/equipment/calibration-stand-cad.png" alt="Calibration Stand CAD">
-        <h3>Precision Calibration Stand</h3>
-      </div>
-
+  <li class="service-card" onclick="openModal(this)">
+    <h3>Custom tooling & fixture design</h3>
+    <div class="project-images">
+      <img src="assets/images/tooling/12output-manifold.png" alt="CAD 12-output manifold">
+      <img src="assets/images/tooling/12-ouput-argon-manifold-real.jpeg" alt="Real 12-output manifold">
+      <img src="assets/images/tooling/6-output-airmanifold1-real.jpeg" alt="6-output air manifold">
+      <img src="assets/images/tooling/6-output-airmanifold2-real.jpeg" alt="6-output air manifold">
+      <img src="assets/images/tooling/custom-pumptank-closeup.png" alt="Custom pump tank CAD">
     </div>
-  </section>
+  </li>
+
+  <li class="service-card" onclick="openModal(this)">
+    <h3>Steel rule die tooling & alignment systems</h3>
+    <div class="project-images">
+      <img src="assets/images/tooling/poke-yoke-steel-rule-die-alignment.png" alt="CAD steel rule die">
+      <img src="assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Steel rule die real">
+      <img src="assets/images/tooling/cylindrical-tooling.png" alt="Cylindrical tooling CAD">
+    </div>
+  </li>
+
+  <li class="service-card" onclick="openModal(this)">
+    <h3>Process & facility layout optimization</h3>
+    <div class="project-images">
+      <img src="assets/images/facility/lab-layout.png" alt="Lab layout CAD">
+      <img src="assets/images/facility/lab-custom-gas-piping.png" alt="Lab gas piping CAD">
+      <img src="assets/images/facility/lab-walkthrough-custom-piping.png" alt="Lab walkthrough CAD">
+    </div>
+  </li>
+
+  <li class="service-card" onclick="openModal(this)">
+    <h3>Low-cost automation and poka-yoke systems</h3>
+    <div class="project-images">
+      <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" alt="Probe press">
+      <img src="assets/images/automation/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg" alt="Laser Cobot system">
+      <img src="assets/images/automation/automated-4probe-resistance-assembly.png" alt="4-probe assembly CAD">
+      <img src="assets/images/automation/machine-sensor-integration.png" alt="Machine sensor CAD">
+    </div>
+  </li>
+
+  <li class="service-card" onclick="openModal(this)">
+    <h3>Vendor coordination & equipment integration support</h3>
+    <div class="project-images">
+      <img src="assets/images/facility/automated-blastgate-measureroom-diffpressure-real.jpeg" alt="Blast gate real">
+      <img src="assets/images/facility/mounted-automated-blastgate-4inchduct-inlab-real.jpeg" alt="Blast gate mounted">
+      <img src="assets/images/equipment/calibration-stand-cad.png" alt="Calibration stand CAD">
+      <img src="assets/images/equipment/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg" alt="Calibration stand real">
+      <img src="assets/images/equipment/custom-active-cooling-assembly.png" alt="Active cooling CAD">
+      <img src="assets/images/equipment/custom-machine-enclosure-tank.png" alt="Machine enclosure CAD">
+      <img src="assets/images/equipment/custom-dual-manifold.png" alt="Dual manifold CAD">
+    </div>
+  </li>
+
+</ul>
 
 </main>
-
-<!-- Modal -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close-button">&times;</span>
-    <h2 id="modal-title"></h2>
-    <p id="modal-description"></p>
-    <div id="modal-images" class="modal-images"></div>
-  </div>
-</div>
 
 <footer>
   <p>&copy; 2026 Engineering & Automation Consulting</p>
 </footer>
 
+<!-- Modal -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <span class="modal-close">&times;</span>
+  <div class="modal-content"></div>
+</div>
+
 <script>
+function openModal(card) {
   const modal = document.getElementById('modal');
-  const modalTitle = document.getElementById('modal-title');
-  const modalDescription = document.getElementById('modal-description');
-  const modalImages = document.getElementById('modal-images');
-  const closeButton = document.querySelector('.close-button');
-
-  document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('click', () => {
-      modal.style.display = 'block';
-      modalTitle.textContent = card.dataset.title;
-      modalDescription.textContent = card.dataset.description;
-      modalImages.innerHTML = '';
-      const images = JSON.parse(card.dataset.images);
-      images.forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        modalImages.appendChild(img);
-      });
-    });
+  const content = modal.querySelector('.modal-content');
+  content.innerHTML = '';
+  const imgs = card.querySelectorAll('img');
+  imgs.forEach(img => {
+    const newImg = document.createElement('img');
+    newImg.src = img.src;
+    newImg.alt = img.alt;
+    newImg.classList.add('modal-img');
+    content.appendChild(newImg);
   });
+  modal.style.display = 'flex';
+}
 
-  closeButton.addEventListener('click', () => modal.style.display = 'none');
-  window.addEventListener('click', e => { if(e.target == modal) modal.style.display = 'none'; });
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
 </script>
 
 </body>
