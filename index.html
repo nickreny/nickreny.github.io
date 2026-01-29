@@ -2,102 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>RM Systems</title>
+  <title>Engineering & Automation Consulting</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navigation -->
-<header class="header">
-  <nav class="nav container">
-    <a href="index.html" class="nav-logo">RM Systems</a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </div>
+<header class="site-header">
+  <h1>Engineering & Automation Consulting</h1>
+  <p>Custom tooling, automation, and equipment integration</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<!-- Hero Section: Dual Images -->
-<section class="hero-dual container">
-  <div class="hero-dual-imgs">
-    <img src="assets/lab-walkthrough-custom-piping.png" alt="Lab Walkthrough" class="hero-img">
-    <img src="assets/custom-pumptank-closeup.png" alt="Pump Tank Closeup" class="hero-img">
-  </div>
-  <div class="hero-text-overlay">
-    <h1>Hands‑On Engineering for Manufacturing & Automation</h1>
-    <p>Custom tooling, automation systems, and process solutions that make your production better.</p>
-    <a href="contact.html" class="btn-primary">Get in Touch</a>
-  </div>
+<main>
+
+<section class="intro">
+  <h2>Practical Engineering. Real-World Execution.</h2>
+  <p>
+    I provide hands-on engineering consulting focused on custom tooling,
+    automation systems, facility integration, and equipment support.
+    From early concept and CAD through fabrication, installation,
+    and vendor coordination.
+  </p>
 </section>
 
-<!-- Services Overview -->
-<section class="services-overview container">
-  <h2>Our Core Capabilities</h2>
-  <div class="services-grid">
+<section class="featured-projects">
 
-    <div class="service-card">
-      <h3>Custom Tooling & Fixture Design</h3>
-      <p>Precision fixtures and alignment boards built to your unique requirements.</p>
-      <img src="assets/cylindrical-tooling.png" alt="Custom Tooling">
+  <h2>Featured Work</h2>
+
+  <!-- Tooling -->
+  <section class="project" 
+           data-title="Steel Rule Die Alignment System"
+           data-description="Precision double-cavity steel rule die with poka-yoke alignment features for repeatable cutting operations."
+           data-images="assets/images/tooling/poke-yoke-steel-rule-die-alignment.png,assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg">
+    <h3>Steel Rule Die Alignment System</h3>
+    <p>
+      Precision double-cavity steel rule die with poka-yoke alignment
+      features for repeatable cutting operations.
+    </p>
+
+    <div class="project-images">
+      <img src="assets/images/tooling/poke-yoke-steel-rule-die-alignment.png" alt="CAD steel rule die alignment">
+      <img src="assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Steel rule die real build">
     </div>
+  </section>
 
-    <div class="service-card">
-      <h3>Steel Rule Die Tooling & Alignment Systems</h3>
-      <p>Accurate, repeatable systems for die cutting and material handling.</p>
-      <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="Steel Rule Die Alignment">
+  <!-- Automation -->
+  <section class="project" 
+           data-title="Automated Probe Press Machine"
+           data-description="Custom automated press system developed for controlled probe insertion and precision assembly."
+           data-images="assets/images/automation/probe-pressmachine.png,assets/images/automation/finalized-probe-pressmachine-real.jpeg">
+    <h3>Automated Probe Press Machine</h3>
+    <p>
+      Custom automated press system developed for controlled probe
+      insertion and precision assembly.
+    </p>
+
+    <div class="project-images">
+      <img src="assets/images/automation/probe-pressmachine.png" alt="Probe press CAD">
+      <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" alt="Probe press machine real">
     </div>
+  </section>
 
-    <div class="service-card">
-      <h3>Process & Facility Layout Optimization</h3>
-      <p>Improve workflow, reduce bottlenecks, and increase efficiency.</p>
-      <img src="assets/lab-layout.png" alt="Facility Layout">
+  <!-- Facility -->
+  <section class="project" 
+           data-title="Automated Blast Gate System"
+           data-description="Automated blast gate installation for airflow control and differential pressure management in a lab environment."
+           data-images="assets/images/facility/automated-blastgate-measureroom-diffpressure-real.jpeg,assets/images/facility/mounted-automated-blastgate-4inchduct-inlab-real.jpeg">
+    <h3>Automated Blast Gate System</h3>
+    <p>
+      Automated blast gate installation for airflow control and
+      differential pressure management in a lab environment.
+    </p>
+
+    <div class="project-images">
+      <img src="assets/images/facility/automated-blastgate-measureroom-diffpressure-real.jpeg">
+      <img src="assets/images/facility/mounted-automated-blastgate-4inchduct-inlab-real.jpeg">
     </div>
+  </section>
 
-    <div class="service-card">
-      <h3>Low-Cost Automation & Counting Systems</h3>
-      <p>Automated solutions to save labor and improve accuracy.</p>
-      <img src="assets/automated-4probe-resistance-assembly.png" alt="Automation Systems">
-    </div>
-
-    <div class="service-card">
-      <h3>Vendor Coordination & Equipment Integration Support</h3>
-      <p>Manage vendor integration and ensure smooth equipment installation.</p>
-      <img src="assets/custom-dual-manifold.png" alt="Equipment Integration">
-    </div>
-
-  </div>
 </section>
 
-<!-- Portfolio Grid -->
-<section class="portfolio container">
-  <h2>Our Work</h2>
-  <div class="portfolio-grid">
-    <!-- Top / new images first -->
-    <img src="assets/lab-walkthrough-custom-piping.png" alt="Lab Walkthrough Custom Piping">
-    <img src="assets/custom-pumptank-closeup.png" alt="Pump Tank Closeup">
-    <img src="assets/custom-active-cooling-assembly.png" alt="Active Cooling Assembly">
-    <img src="assets/12output-manifold.png" alt="12 Output Manifold">
-    <img src="assets/precision-clamping-thickness-measurement-electromechanical.png" alt="Precision Clamping Measurement">
-
-    <!-- Older / supporting images -->
-    <img src="assets/custom-machine-enclosure-tank.png" alt="Machine Enclosure Tank">
-    <img src="assets/lab-custom-gas-piping.png" alt="Lab Gas Piping">
-    <img src="assets/machine-sensor-integration.png" alt="Machine Sensor Integration">
-    <img src="assets/cylindrical-tooling.png" alt="Cylindrical Tooling">
-    <img src="assets/custom-dual-manifold.png" alt="Custom Dual Manifold">
-    <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="Steel Rule Die Alignment">
-    <img src="assets/automated-4probe-resistance-assembly.png" alt="Automated Assembly">
-  </div>
+<section class="cta">
+  <h2>Need Engineering Support?</h2>
+  <p>
+    Whether you need tooling, automation, facility layout, or
+    equipment integration support, I can help.
+  </p>
+  <a class="button" href="services.html">View Services</a>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <p>&copy; 2026 RM Systems</p>
-  <p><a href="contact.html">Contact Us</a></p>
+</main>
+
+<footer>
+  <p>&copy; 2026 Engineering & Automation Consulting</p>
 </footer>
+
+<!-- Modal Overlay -->
+<div id="serviceModal" class="modal">
+  <div class="modal-content fade-in">
+    <span class="close-button">&times;</span>
+    <h3 id="modalTitle">Service Title</h3>
+    <p id="modalDescription">Detailed description of the service goes here.</p>
+    <div id="modalImages" class="modal-images"></div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("serviceModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
+  const modalImages = document.getElementById("modalImages");
+  const closeButton = document.querySelector(".close-button");
+
+  const projects = document.querySelectorAll(".project");
+  projects.forEach(project => {
+    project.style.cursor = "pointer";
+    project.addEventListener("click", () => {
+      modalTitle.textContent = project.dataset.title;
+      modalDescription.textContent = project.dataset.description;
+
+      // Populate images
+      modalImages.innerHTML = "";
+      if (project.dataset.images) {
+        const images = project.dataset.images.split(",");
+        images.forEach(src => {
+          const img = document.createElement("img");
+          img.src = src.trim();
+          modalImages.appendChild(img);
+        });
+      }
+
+      modal.style.display = "block";
+    });
+  });
+
+  closeButton.addEventListener("click", () => modal.style.display = "none");
+  window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
+</script>
 
 </body>
 </html>
