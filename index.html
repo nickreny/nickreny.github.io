@@ -20,106 +20,125 @@
   </nav>
 </header>
 
-<main class="container">
-  <!-- Intro -->
-  <section class="intro">
+<!-- Hero Section -->
+<section class="hero-dual container">
+  <div class="hero-dual-imgs">
+    <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="CAD steel rule die" class="hero-img">
+    <img src="assets/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Real steel rule die" class="hero-img">
+  </div>
+  <div class="hero-text-overlay">
     <h1>Practical Engineering. Real-World Execution.</h1>
-    <p>Hands-on engineering consulting focused on tooling, automation, facility integration, and equipment support. From CAD and concept through fabrication, installation, and vendor coordination.</p>
-  </section>
+    <p>Hands-on consulting for custom tooling, automation, facility integration, and equipment support.</p>
+  </div>
+</section>
 
-  <!-- Featured Work by Category -->
-  <section class="featured-work">
-    <h2>Featured Work</h2>
+<!-- Services Grid -->
+<section class="services-grid container">
+  <div class="service-card" data-modal="tooling-modal">
+    <img src="assets/12output-manifold.png" alt="Custom tooling CAD">
+    <h3>Custom Tooling & Fixture Design</h3>
+  </div>
+  <div class="service-card" data-modal="steel-rule-modal">
+    <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="Steel rule die CAD">
+    <h3>Steel Rule Die Tooling & Alignment Systems</h3>
+  </div>
+  <div class="service-card" data-modal="facility-modal">
+    <img src="assets/lab-layout.png" alt="Facility layout CAD">
+    <h3>Process & Facility Layout Optimization</h3>
+  </div>
+  <div class="service-card" data-modal="automation-modal">
+    <img src="assets/automated-4probe-resistance-assembly.png" alt="Automation CAD">
+    <h3>Low-Cost Automation & Poka-Yoke Systems</h3>
+  </div>
+  <div class="service-card" data-modal="vendor-modal">
+    <img src="assets/custom-machine-enclosure-tank.png" alt="Vendor integration CAD">
+    <h3>Vendor Coordination & Equipment Integration</h3>
+  </div>
+</section>
 
-    <!-- Services Grid -->
-    <div class="services-grid">
-      <div class="service-card" onclick="openModal('tooling')">
-        <img src="assets/images/tooling/poke-yoke-steel-rule-die-alignment.png" alt="Steel Rule Die CAD">
-        <h3>Custom Tooling & Fixtures</h3>
-      </div>
-      <div class="service-card" onclick="openModal('automation')">
-        <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" alt="Automation CAD">
-        <h3>Automation & Machine Design</h3>
-      </div>
-      <div class="service-card" onclick="openModal('facility')">
-        <img src="assets/images/facility/automated-blastgate-measureroom-diffpressure-real.jpeg" alt="Facility CAD">
-        <h3>Process & Facility Layout</h3>
-      </div>
-      <div class="service-card" onclick="openModal('poka')">
-        <img src="assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Poka-Yoke CAD">
-        <h3>Low-Cost Automation & Poka-Yoke</h3>
-      </div>
-      <div class="service-card" onclick="openModal('vendor')">
-        <img src="assets/images/equipment/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg" alt="Vendor Coordination">
-        <h3>Vendor Coordination & Integration</h3>
-      </div>
-    </div>
-  </section>
-</main>
+<!-- Modals -->
+<!-- Tooling Modal -->
+<div id="tooling-modal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <h3>Custom Tooling & Fixture Design</h3>
+    <img src="assets/12output-manifold.png" alt="12-output manifold CAD">
+    <img src="assets/12-ouput-argon-manifold-real.jpeg" alt="12-output manifold real">
+    <img src="assets/6-output-airmanifold1-real.jpeg" alt="6-output air manifold real">
+    <img src="assets/6-output-airmanifold2-real.jpeg" alt="6-output air manifold real">
+    <img src="assets/custom-dual-manifold.png" alt="Custom dual manifold CAD">
+  </div>
+</div>
 
-<!-- Modal -->
-<div id="serviceModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <div id="modalContent" class="modal-content"></div>
+<!-- Steel Rule Modal -->
+<div id="steel-rule-modal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <h3>Steel Rule Die Tooling & Alignment Systems</h3>
+    <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="CAD steel rule die">
+    <img src="assets/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Steel rule die real">
+    <img src="assets/cylindrical-tooling.png" alt="Cylindrical tooling CAD">
+    <img src="assets/precision-clamping-thickness-measurement-electromechanical.png" alt="Precision clamping CAD">
+  </div>
+</div>
+
+<!-- Facility Modal -->
+<div id="facility-modal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <h3>Process & Facility Layout Optimization</h3>
+    <img src="assets/lab-layout.png" alt="Lab layout CAD">
+    <img src="assets/lab-walkthrough-custom-piping.png" alt="Walkthrough custom piping real">
+    <img src="assets/lab-custom-gas-piping.png" alt="Custom gas piping CAD">
+    <img src="assets/mounted-automated-blastgate-4inchduct-inlab-real.jpeg" alt="Mounted blast gate real">
+    <img src="assets/automated-blastgate-measureroom-diffpressure-real.jpeg" alt="Blast gate diff pressure real">
+  </div>
+</div>
+
+<!-- Automation Modal -->
+<div id="automation-modal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <h3>Low-Cost Automation & Poka-Yoke Systems</h3>
+    <img src="assets/automated-4probe-resistance-assembly.png" alt="Automated probe press CAD">
+    <img src="assets/finalized-probe-pressmachine-real.jpeg" alt="Probe press real">
+    <img src="assets/custom-active-cooling-assembly.png" alt="Custom cooling CAD">
+    <img src="assets/machine-sensor-integration.png" alt="Sensor integration CAD">
+  </div>
+</div>
+
+<!-- Vendor Modal -->
+<div id="vendor-modal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <h3>Vendor Coordination & Equipment Integration</h3>
+    <img src="assets/custom-machine-enclosure-tank.png" alt="Machine enclosure CAD">
+  </div>
 </div>
 
 <script>
-const modal = document.getElementById("serviceModal");
-const modalContent = document.getElementById("modalContent");
-
-const serviceImages = {
-  tooling: [
-    "assets/images/tooling/poke-yoke-steel-rule-die-alignment.png",
-    "assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg",
-    "assets/images/tooling/12output-manifold.png",
-    "assets/images/tooling/12-ouput-argon-manifold-real.jpeg",
-    "assets/images/tooling/6-output-airmanifold1-real.jpeg",
-    "assets/images/tooling/6-output-airmanifold2-real.jpeg",
-    "assets/images/tooling/custom-dual-manifold.png",
-    "assets/images/tooling/custom-pumptank-closeup.png",
-    "assets/images/tooling/custom-machine-enclosure-tank.png",
-    "assets/images/tooling/cylindrical-tooling.png"
-  ],
-  automation: [
-    "assets/images/automation/finalized-probe-pressmachine-real.jpeg",
-    "assets/images/automation/automated-4probe-resistance-assembly.png",
-    "assets/images/automation/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg",
-    "assets/images/automation/custom-active-cooling-assembly.png",
-    "assets/images/automation/machine-sensor-integration.png"
-  ],
-  facility: [
-    "assets/images/facility/automated-blastgate-measureroom-diffpressure-real.jpeg",
-    "assets/images/facility/mounted-automated-blastgate-4inchduct-inlab-real.jpeg",
-    "assets/images/facility/lab-layout.png",
-    "assets/images/facility/lab-walkthrough-custom-piping.png",
-    "assets/images/facility/lab-custom-gas-piping.png",
-    "assets/images/facility/precision-clamping-thickness-measurement-electromechanical.png"
-  ],
-  poka: [
-    "assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg",
-    "assets/images/tooling/poke-yoke-steel-rule-die-alignment.png"
-  ],
-  vendor: [
-    "assets/images/equipment/calibration-stand-cad.png",
-    "assets/images/equipment/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg"
-  ]
-};
-
-function openModal(service) {
-  modalContent.innerHTML = ""; // Clear previous
-  serviceImages[service].forEach(src => {
-    const img = document.createElement("img");
-    img.src = src;
-    img.className = "modal-img";
-    modalContent.appendChild(img);
+// Modal functionality
+document.querySelectorAll('.service-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const modalId = card.getAttribute('data-modal');
+    document.getElementById(modalId).style.display = 'block';
   });
-  modal.style.display = "flex";
-}
-
-function closeModal() {
-  modal.style.display = "none";
-}
+});
+document.querySelectorAll('.modal-close').forEach(span => {
+  span.addEventListener('click', () => {
+    span.parentElement.parentElement.style.display = 'none';
+  });
+});
+window.addEventListener('click', e => {
+  if(e.target.classList.contains('modal')) {
+    e.target.style.display = 'none';
+  }
+});
 </script>
+
+<footer class="footer">
+  <p>&copy; 2026 Nick Reny Engineering</p>
+</footer>
 
 </body>
 </html>
