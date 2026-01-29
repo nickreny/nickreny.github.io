@@ -8,98 +8,114 @@
 </head>
 <body>
 
-<header>
-  <div class="nav container">
-    <div class="nav-logo">Engineering & Automation Consulting</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+<header class="site-header">
+  <h1>Engineering & Automation Consulting</h1>
+  <p>Custom tooling, automation, and equipment integration</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<main class="container">
+<main>
 
-  <!-- Hero Section -->
-  <section class="hero-dual">
-    <div class="hero-dual-imgs">
-      <img src="assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Steel Rule Die Real Build" class="hero-img">
-      <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" alt="Probe Press Machine Real" class="hero-img">
+<section class="intro">
+  <h2>Practical Engineering. Real-World Execution.</h2>
+  <p>
+    I provide hands-on engineering consulting focused on custom tooling,
+    automation systems, facility integration, and equipment support.
+    From early concept and CAD through fabrication, installation,
+    and vendor coordination.
+  </p>
+</section>
+
+<section class="featured-projects">
+
+  <h2>Featured Work</h2>
+
+  <!-- Steel Rule Die -->
+  <section class="project" onclick="openModal(this)">
+    <h3>Steel Rule Die Alignment System</h3>
+    <p>
+      Precision double-cavity steel rule die with poka-yoke alignment
+      features for repeatable cutting operations.
+    </p>
+    <div class="project-images">
+      <img src="assets/images/tooling/poke-yoke-steel-rule-die-alignment.png" alt="CAD steel rule die alignment">
+      <img src="assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Steel rule die real build">
     </div>
-    <div class="hero-text-overlay">
-      <h1>Practical Engineering. Real-World Execution.</h1>
-      <p>Hands-on engineering consulting focused on custom tooling, automation systems, facility integration, and equipment support. From concept and CAD through fabrication, installation, and vendor coordination.</p>
-      <a href="services.html" class="btn-primary">View Services</a>
+  </section>
+
+  <!-- Probe Press -->
+  <section class="project" onclick="openModal(this)">
+    <h3>Automated Probe Press Machine</h3>
+    <p>
+      Custom automated press system developed for controlled probe
+      insertion and precision assembly.
+    </p>
+    <div class="project-images">
+      <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" alt="Probe press CAD">
+      <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" alt="Probe press machine real">
     </div>
   </section>
 
-  <!-- Featured Work -->
-  <section>
-    <h2>Featured Work</h2>
-    <div class="portfolio-grid">
-
-      <!-- Tooling -->
-      <div class="service-card" data-title="Steel Rule Die Alignment System" data-description="Precision double-cavity steel rule die with poka-yoke alignment features for repeatable cutting operations." data-images='["assets/images/tooling/poke-yoke-steel-rule-die-alignment.png","assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg"]'>
-        <img src="assets/images/tooling/poke-yoke-steel-rule-die-alignment.png" alt="Steel Rule Die CAD">
-        <h3>Steel Rule Die Alignment System</h3>
-      </div>
-
-      <!-- Automation -->
-      <div class="service-card" data-title="Automated Probe Press Machine" data-description="Custom automated press system developed for controlled probe insertion and precision assembly." data-images='["assets/images/automation/probe-pressmachine.png","assets/images/automation/finalized-probe-pressmachine-real.jpeg"]'>
-        <img src="assets/images/automation/probe-pressmachine.png" alt="Probe Press CAD">
-        <h3>Automated Probe Press Machine</h3>
-      </div>
-
-      <!-- Facility -->
-      <div class="service-card" data-title="Automated Blast Gate System" data-description="Automated blast gate installation for airflow control and differential pressure management in a lab environment." data-images='["assets/images/facility/automated-blastgate-measureroom-diffpressure-real.jpeg","assets/images/facility/mounted-automated-blastgate-4inchduct-inlab-real.jpeg"]'>
-        <img src="assets/images/facility/automated-blastgate-measureroom-diffpressure-real.jpeg" alt="Blast Gate System Real">
-        <h3>Automated Blast Gate System</h3>
-      </div>
-
+  <!-- Blast Gate -->
+  <section class="project" onclick="openModal(this)">
+    <h3>Automated Blast Gate System</h3>
+    <p>
+      Automated blast gate installation for airflow control and
+      differential pressure management in a lab environment.
+    </p>
+    <div class="project-images">
+      <img src="assets/images/facility/automated-blastgate-measureroom-diffpressure-real.jpeg" alt="Blast gate real">
+      <img src="assets/images/facility/mounted-automated-blastgate-4inchduct-inlab-real.jpeg" alt="Blast gate real mounted">
     </div>
   </section>
+
+</section>
+
+<section class="cta">
+  <h2>Need Engineering Support?</h2>
+  <p>
+    Whether you need tooling, automation, facility layout, or
+    equipment integration support, I can help.
+  </p>
+  <a class="button" href="services.html">View Services</a>
+</section>
 
 </main>
-
-<!-- Modal -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close-button">&times;</span>
-    <h2 id="modal-title"></h2>
-    <p id="modal-description"></p>
-    <div id="modal-images" class="modal-images"></div>
-  </div>
-</div>
 
 <footer>
   <p>&copy; 2026 Engineering & Automation Consulting</p>
 </footer>
 
+<!-- Modal -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <span class="modal-close">&times;</span>
+  <div class="modal-content"></div>
+</div>
+
 <script>
+function openModal(project) {
   const modal = document.getElementById('modal');
-  const modalTitle = document.getElementById('modal-title');
-  const modalDescription = document.getElementById('modal-description');
-  const modalImages = document.getElementById('modal-images');
-  const closeButton = document.querySelector('.close-button');
-
-  document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('click', () => {
-      modal.style.display = 'block';
-      modalTitle.textContent = card.dataset.title;
-      modalDescription.textContent = card.dataset.description;
-      modalImages.innerHTML = '';
-      const images = JSON.parse(card.dataset.images);
-      images.forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        modalImages.appendChild(img);
-      });
-    });
+  const content = modal.querySelector('.modal-content');
+  content.innerHTML = '';
+  const imgs = project.querySelectorAll('img');
+  imgs.forEach(img => {
+    const newImg = document.createElement('img');
+    newImg.src = img.src;
+    newImg.alt = img.alt;
+    newImg.classList.add('modal-img');
+    content.appendChild(newImg);
   });
+  modal.style.display = 'flex';
+}
 
-  closeButton.addEventListener('click', () => modal.style.display = 'none');
-  window.addEventListener('click', e => { if(e.target == modal) modal.style.display = 'none'; });
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
 </script>
 
 </body>
