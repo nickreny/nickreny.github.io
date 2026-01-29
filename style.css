@@ -49,76 +49,75 @@ header, nav {
 }
 
 /* ------------------------------
-   Hero Section: Dual Images
+   Hero Dual Photos with Side Overlay
 --------------------------------*/
 .hero-dual {
-  position: relative;
-  margin-bottom: 50px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
+  margin-bottom: 50px;
 }
 
 .hero-dual-imgs {
+  flex: 1;
   display: flex;
-  gap: 10px;
-  flex: 1 1 60%;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .hero-dual-imgs .hero-img {
-  width: 48%;
+  width: 100%;
   border-radius: 10px;
   object-fit: cover;
-  max-height: 400px;
+  max-height: 300px; /* limits the photo height */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.hero-text-overlay {
-  position: absolute; /* floating over images */
-  top: 20%;
-  left: 5%; /* move it slightly to the left side */
-  max-width: 400px;
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent dark overlay */
-  color: #fff;
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+.hero-text-overlay.side-overlay {
+  flex: 1;
+  padding: 20px 25px;
+  color: #004999;
+}
+
+.hero-text-overlay.side-overlay h1 {
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.5;
-  transition: all 0.3s ease;
-}
-
-.hero-text-overlay h1 {
-  font-size: 2.2em;
+  font-size: 2.5em;
   font-weight: 700;
-  margin-bottom: 12px;
-  line-height: 1.2;
+  margin-bottom: 15px;
 }
 
-.hero-text-overlay p {
-  font-size: 1em;
-  font-weight: 300;
-  margin-bottom: 10px;
+.hero-text-overlay.side-overlay p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-/* Optional: subtle hover effect */
-.hero-text-overlay:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
-}
-
-.btn-primary {
+.hero-text-overlay.side-overlay .btn-primary {
+  display: inline-block;
   background-color: #ffd700;
   color: #004999;
   padding: 12px 25px;
   border-radius: 5px;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
   transition: background-color 0.3s;
 }
 
-.btn-primary:hover {
+.hero-text-overlay.side-overlay .btn-primary:hover {
   background-color: #e6c200;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .hero-dual {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text-overlay.side-overlay {
+    text-align: center;
+  }
 }
 
 /* ------------------------------
