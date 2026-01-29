@@ -123,7 +123,7 @@ h2 {
 }
 
 /* ------------------------------
-   Services Grid
+   Services / Portfolio Grid
 --------------------------------*/
 .services-grid, .portfolio-grid {
   display: grid;
@@ -137,6 +137,12 @@ h2 {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.service-card:hover {
+  transform: scale(1.02);
 }
 
 .service-card img {
@@ -156,14 +162,8 @@ h2 {
 }
 
 /* ------------------------------
-   Portfolio Grid
+   Portfolio Grid Images Hover
 --------------------------------*/
-.portfolio-grid {
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
 .portfolio-grid img {
   width: 100%;
   border-radius: 10px;
@@ -222,6 +222,72 @@ footer a:hover {
 }
 
 /* ------------------------------
+   Modal Styles
+--------------------------------*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  animation: fadeBackground 0.3s;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s;
+}
+
+.modal-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-images img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: -1rem;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+/* Fade Animations */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeBackground {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* ------------------------------
    Responsive Adjustments
 --------------------------------*/
 @media screen and (max-width: 1024px) {
@@ -243,7 +309,7 @@ footer a:hover {
   }
 
   .hero-text-overlay {
-    margin-top: -150px; /* adjust overlay on small screens */
+    margin-top: -150px;
     padding: 20px;
   }
 
