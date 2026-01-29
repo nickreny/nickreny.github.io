@@ -2,148 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Engineering & Automation Consulting</title>
+  <title>Nick Reny Engineering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <h1>Engineering & Automation Consulting</h1>
-  <p>Custom tooling, automation, and equipment integration</p>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+<header class="header">
+  <nav class="nav container">
+    <a href="index.html" class="nav-logo">Nick Reny Engineering</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 </header>
 
-<main>
+<main class="container">
   <section class="intro">
-    <h2>Practical Engineering. Real-World Execution.</h2>
-    <p>
-      I provide hands-on engineering consulting focused on custom tooling,
-      automation systems, facility integration, and equipment support.
-      From early concept and CAD through fabrication, installation,
-      and vendor coordination.
-    </p>
+    <h1>Practical Engineering. Real-World Execution.</h1>
+    <p>Hands-on engineering consulting focused on tooling, automation, facility layout, and equipment integration. From concept to fabrication and installation.</p>
   </section>
 
-  <section class="featured-projects">
-    <h2>Featured Work</h2>
-
-    <!-- TOOLING -->
-    <section class="project-category">
-      <h3>Tooling</h3>
-
-      <div class="services-grid">
-        <div class="project" data-images="assets/12output-manifold.png,assets/12-ouput-argon-manifold-real.jpeg">
-          <h4>12-Output Argon Manifold</h4>
-          <img src="assets/12output-manifold.png" alt="CAD 12 output manifold">
-          <img src="assets/12-ouput-argon-manifold-real.jpeg" alt="Real 12 output manifold">
-        </div>
-
-        <div class="project" data-images="assets/cylindrical-tooling.png,assets/steel-rule-die-doublecavity-withalignmentpins-real.jpeg">
-          <h4>Steel Rule Die Alignment</h4>
-          <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="CAD steel rule die alignment">
-          <img src="assets/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Steel rule die real">
-        </div>
-
-        <div class="project" data-images="assets/custom-dual-manifold.png,assets/6-output-airmanifold1-real.jpeg,assets/6-output-airmanifold2-real.jpeg">
-          <h4>6-Output Air Manifold</h4>
-          <img src="assets/custom-dual-manifold.png" alt="CAD 6-output air manifold">
-          <img src="assets/6-output-airmanifold1-real.jpeg" alt="6-output air manifold real">
-          <img src="assets/6-output-airmanifold2-real.jpeg" alt="6-output air manifold real">
-        </div>
+  <!-- Services Grid -->
+  <section class="featured-services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="project" data-images="assets/poke-yoke-steel-rule-die-alignment.png,assets/steel-rule-die-doublecavity-withalignmentpins-real.jpeg">
+        <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="Steel Rule Die">
+        <h4>Steel Rule Die Tooling & Alignment Systems</h4>
       </div>
-    </section>
 
-    <!-- AUTOMATION -->
-    <section class="project-category">
-      <h3>Automation</h3>
-      <div class="services-grid">
-        <div class="project" data-images="assets/automated-4probe-resistance-assembly.png,assets/finalized-probe-pressmachine-real.jpeg">
-          <h4>Automated Probe Press Machine</h4>
-          <img src="assets/automated-4probe-resistance-assembly.png" alt="CAD probe press machine">
-          <img src="assets/finalized-probe-pressmachine-real.jpeg" alt="Real probe press machine">
-        </div>
-
-        <div class="project" data-images="assets/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg">
-          <h4>Laser Welding Cobot System</h4>
-          <img src="assets/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg" alt="Laser welding cobot system">
-        </div>
+      <div class="project" data-images="assets/12output-manifold.png,assets/12-ouput-argon-manifold-real.jpeg,assets/6-output-airmanifold1-real.jpeg,assets/6-output-airmanifold2-real.jpeg,assets/custom-dual-manifold.png">
+        <img src="assets/12output-manifold.png" alt="Custom Tooling">
+        <h4>Custom Tooling & Fixture Design</h4>
       </div>
-    </section>
 
-    <!-- FACILITY / LAB -->
-    <section class="project-category">
-      <h3>Facility / Lab / Layout</h3>
-      <div class="services-grid">
-        <div class="project" data-images="assets/lab-layout.png">
-          <h4>Lab Layout Planning</h4>
-          <img src="assets/lab-layout.png" alt="Lab layout CAD">
-        </div>
-
-        <div class="project" data-images="assets/lab-walkthrough-custom-piping.png,assets/automated-blastgate-measureroom-diffpressure-real.jpeg,assets/mounted-automated-blastgate-4inchduct-inlab-real.jpeg">
-          <h4>Automated Blast Gate System</h4>
-          <img src="assets/lab-walkthrough-custom-piping.png" alt="CAD blast gate">
-          <img src="assets/automated-blastgate-measureroom-diffpressure-real.jpeg" alt="Real blast gate 1">
-          <img src="assets/mounted-automated-blastgate-4inchduct-inlab-real.jpeg" alt="Real blast gate 2">
-        </div>
-
-        <div class="project" data-images="assets/precision-clamping-thickness-measurement-electromechanical.png,assets/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg">
-          <h4>Precision Calibration Stand</h4>
-          <img src="assets/precision-clamping-thickness-measurement-electromechanical.png" alt="CAD calibration stand">
-          <img src="assets/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg" alt="Real calibration stand">
-        </div>
+      <div class="project" data-images="assets/lab-layout.png,assets/lab-walkthrough-custom-piping.png,assets/lab-custom-gas-piping.png,machine-sensor-integration.png,custom-machine-enclosure-tank.png,custom-pumptank-closeup.png,custom-active-cooling-assembly.png,automated-4probe-resistance-assembly.png">
+        <img src="assets/lab-layout.png" alt="Process & Facility Layout">
+        <h4>Process & Facility Layout Optimization</h4>
       </div>
-    </section>
+
+      <div class="project" data-images="assets/automated-4probe-resistance-assembly.png,assets/finalized-probe-pressmachine-real.jpeg,assets/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg">
+        <img src="assets/automated-4probe-resistance-assembly.png" alt="Automation">
+        <h4>Low-Cost Automation & Poka-Yoke Systems</h4>
+      </div>
+
+      <div class="project" data-images="assets/12-ouput-argon-manifold-real.jpeg,assets/custom-pumptank-closeup.png">
+        <img src="assets/12-ouput-argon-manifold-real.jpeg" alt="Vendor Integration">
+        <h4>Vendor Coordination & Equipment Integration</h4>
+      </div>
+    </div>
   </section>
-
-  <section class="cta">
-    <h2>Need Engineering Support?</h2>
-    <p>
-      Whether you need tooling, automation, facility layout, or
-      equipment integration support, I can help.
-    </p>
-    <a class="button" href="services.html">View Services</a>
-  </section>
-
 </main>
 
-<footer>
-  <p>&copy; 2026 Engineering & Automation Consulting</p>
+<footer class="footer container">
+  <p>&copy; 2026 Nick Reny Engineering</p>
+  <p><a href="contact.html">Contact Us</a></p>
 </footer>
 
 <!-- Modal -->
 <div id="modal" class="modal">
   <span class="modal-close">&times;</span>
-  <div class="modal-content" id="modal-content">
-    <!-- Images inserted dynamically -->
-  </div>
+  <div class="modal-content" id="modal-content"></div>
 </div>
 
 <script>
-  const modal = document.getElementById('modal');
-  const modalContent = document.getElementById('modal-content');
-  const modalClose = document.querySelector('.modal-close');
+const modal = document.getElementById('modal');
+const modalContent = document.getElementById('modal-content');
+const modalClose = document.querySelector('.modal-close');
 
-  document.querySelectorAll('.project').forEach(project => {
-    project.addEventListener('click', () => {
-      const images = project.dataset.images.split(',');
-      modalContent.innerHTML = '';
-      images.forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        img.className = 'modal-img';
-        modalContent.appendChild(img);
-      });
-      modal.style.display = 'flex';
+document.querySelectorAll('.project').forEach(project => {
+  project.addEventListener('click', () => {
+    const images = project.dataset.images.split(',');
+    modalContent.innerHTML = '';
+    images.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.className = 'modal-img';
+      modalContent.appendChild(img);
     });
+    modal.style.display = 'flex';
   });
+});
 
-  modalClose.onclick = () => { modal.style.display = 'none'; }
-  window.onclick = e => { if(e.target === modal) modal.style.display = 'none'; }
+modalClose.onclick = () => { modal.style.display = 'none'; }
+window.onclick = e => { if(e.target === modal) modal.style.display = 'none'; }
 </script>
 
 </body>
