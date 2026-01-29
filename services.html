@@ -8,141 +8,96 @@
 </head>
 <body>
 
-<header class="site-header">
-  <h1>Services</h1>
-  <p>Engineering solutions from concept to implementation</p>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header>
+  <div class="nav container">
+    <div class="nav-logo">Engineering & Automation Consulting</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<main>
+<main class="container">
 
-<section class="services-intro">
-  <p>
-    Services are focused on practical, manufacturable solutions.
-    Engagements range from individual tooling designs to full
-    system integration and vendor coordination.
-  </p>
-</section>
+  <section>
+    <h2>Our Services</h2>
+    <p>Services are focused on practical, manufacturable solutions. Engagements range from individual tooling designs to full system integration and vendor coordination.</p>
 
-<!-- TOOLING -->
-<section class="service-category">
-  <h2>Custom Tooling & Fixtures</h2>
+    <div class="services-grid">
 
-  <section class="project" 
-           data-title="12-Output Argon Manifold" 
-           data-description="Custom 12-output argon manifold for precise gas delivery in multi-station processes. Fully machined and assembled for easy integration."
-           data-images="assets/images/tooling/12output-manifold.png,assets/images/tooling/12-ouput-argon-manifold-real.jpeg">
-    <h3>12-Output Argon Manifold</h3>
-    <div class="project-images">
-      <img src="assets/images/tooling/12output-manifold.png">
-      <img src="assets/images/tooling/12-ouput-argon-manifold-real.jpeg">
+      <!-- Tooling -->
+      <div class="service-card" data-title="12-Output Argon Manifold" data-description="Custom 12-output argon manifold for controlled gas delivery in lab and manufacturing setups." data-images='["assets/images/tooling/12output-manifold.png","assets/images/tooling/12-ouput-argon-manifold-real.jpeg"]'>
+        <img src="assets/images/tooling/12output-manifold.png" alt="12 Output Argon Manifold CAD">
+        <h3>12-Output Argon Manifold</h3>
+      </div>
+
+      <div class="service-card" data-title="6-Output Air Manifold" data-description="Custom 6-output air manifold for precise distribution in pneumatic systems." data-images='["assets/images/tooling/6-output-airmanifold1-real.jpeg","assets/images/tooling/6-output-airmanifold2-real.jpeg"]'>
+        <img src="assets/images/tooling/6-output-airmanifold1-real.jpeg" alt="6 Output Air Manifold Real">
+        <h3>6-Output Air Manifold</h3>
+      </div>
+
+      <!-- Automation -->
+      <div class="service-card" data-title="Laser Welding Cobot System" data-description="Custom laser welding cobot system for automated precision assembly." data-images='["assets/images/automation/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg"]'>
+        <img src="assets/images/automation/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg" alt="Laser Cobot System Real">
+        <h3>Laser Welding Cobot System</h3>
+      </div>
+
+      <div class="service-card" data-title="Automated Probe Press" data-description="Automated press system for controlled probe insertion and precision assembly." data-images='["assets/images/automation/finalized-probe-pressmachine-real.jpeg"]'>
+        <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" alt="Automated Probe Press Real">
+        <h3>Automated Probe Press</h3>
+      </div>
+
+      <!-- Equipment -->
+      <div class="service-card" data-title="Precision Calibration Stand" data-description="Precision calibration stand with granite slab for accurate measurement systems." data-images='["assets/images/equipment/calibration-stand-cad.png","assets/images/equipment/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg"]'>
+        <img src="assets/images/equipment/calibration-stand-cad.png" alt="Calibration Stand CAD">
+        <h3>Precision Calibration Stand</h3>
+      </div>
+
     </div>
   </section>
-
-  <section class="project" 
-           data-title="6-Output Air Manifold" 
-           data-description="Custom 6-output air manifold designed for clean, leak-free air distribution in lab processes."
-           data-images="assets/images/tooling/6-output-airmanifold1-real.jpeg,assets/images/tooling/6-output-airmanifold2-real.jpeg">
-    <h3>6-Output Air Manifold</h3>
-    <div class="project-images">
-      <img src="assets/images/tooling/6-output-airmanifold1-real.jpeg">
-      <img src="assets/images/tooling/6-output-airmanifold2-real.jpeg">
-    </div>
-  </section>
-</section>
-
-<!-- AUTOMATION -->
-<section class="service-category">
-  <h2>Automation & Machine Design</h2>
-
-  <section class="project" 
-           data-title="Laser Welding Cobot System" 
-           data-description="Automated laser welding system with cobot integration for precision assembly and high throughput."
-           data-images="assets/images/automation/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg">
-    <h3>Laser Welding Cobot System</h3>
-    <div class="project-images">
-      <img src="assets/images/automation/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg">
-    </div>
-  </section>
-
-  <section class="project" 
-           data-title="Automated Probe Press" 
-           data-description="Automated press system designed for precision probe insertion, reducing operator variability."
-           data-images="assets/images/automation/finalized-probe-pressmachine-real.jpeg">
-    <h3>Automated Probe Press</h3>
-    <div class="project-images">
-      <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg">
-    </div>
-  </section>
-</section>
-
-<!-- EQUIPMENT -->
-<section class="service-category">
-  <h2>Equipment & Measurement Systems</h2>
-
-  <section class="project" 
-           data-title="Precision Calibration Stand" 
-           data-description="Precision calibration stand for measurement systems, assembled with granite slab and adjustable fixtures for high accuracy."
-           data-images="assets/images/equipment/calibration-stand-cad.png,assets/images/equipment/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg">
-    <h3>Precision Calibration Stand</h3>
-    <div class="project-images">
-      <img src="assets/images/equipment/calibration-stand-cad.png">
-      <img src="assets/images/equipment/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg">
-    </div>
-  </section>
-</section>
 
 </main>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-description"></p>
+    <div id="modal-images" class="modal-images"></div>
+  </div>
+</div>
 
 <footer>
   <p>&copy; 2026 Engineering & Automation Consulting</p>
 </footer>
 
-<!-- Modal Overlay -->
-<div id="serviceModal" class="modal">
-  <div class="modal-content fade-in">
-    <span class="close-button">&times;</span>
-    <h3 id="modalTitle">Service Title</h3>
-    <p id="modalDescription">Detailed description of the service goes here.</p>
-    <div id="modalImages" class="modal-images"></div>
-  </div>
-</div>
-
 <script>
-  const modal = document.getElementById("serviceModal");
-  const modalTitle = document.getElementById("modalTitle");
-  const modalDescription = document.getElementById("modalDescription");
-  const modalImages = document.getElementById("modalImages");
-  const closeButton = document.querySelector(".close-button");
+  const modal = document.getElementById('modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDescription = document.getElementById('modal-description');
+  const modalImages = document.getElementById('modal-images');
+  const closeButton = document.querySelector('.close-button');
 
-  const projects = document.querySelectorAll(".project");
-  projects.forEach(project => {
-    project.style.cursor = "pointer";
-    project.addEventListener("click", () => {
-      modalTitle.textContent = project.dataset.title;
-      modalDescription.textContent = project.dataset.description;
-
-      modalImages.innerHTML = "";
-      if (project.dataset.images) {
-        const images = project.dataset.images.split(",");
-        images.forEach(src => {
-          const img = document.createElement("img");
-          img.src = src.trim();
-          modalImages.appendChild(img);
-        });
-      }
-
-      modal.style.display = "block";
+  document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('click', () => {
+      modal.style.display = 'block';
+      modalTitle.textContent = card.dataset.title;
+      modalDescription.textContent = card.dataset.description;
+      modalImages.innerHTML = '';
+      const images = JSON.parse(card.dataset.images);
+      images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        modalImages.appendChild(img);
+      });
     });
   });
 
-  closeButton.addEventListener("click", () => modal.style.display = "none");
-  window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
+  closeButton.addEventListener('click', () => modal.style.display = 'none');
+  window.addEventListener('click', e => { if(e.target == modal) modal.style.display = 'none'; });
 </script>
 
 </body>
