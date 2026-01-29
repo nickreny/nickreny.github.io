@@ -25,13 +25,7 @@ header, nav {
   padding: 15px 20px;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav a {
+nav a {
   color: white;
   text-decoration: none;
   margin-left: 20px;
@@ -39,72 +33,12 @@ header, nav {
   transition: color 0.3s;
 }
 
-.nav a:hover {
+nav a:hover {
   color: #ffd700;
 }
 
-.nav-logo {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
 /* ------------------------------
-   Hero Section: Dual Images
---------------------------------*/
-.hero-dual {
-  position: relative;
-  margin-bottom: 50px;
-}
-
-.hero-dual-imgs {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.hero-dual-imgs .hero-img {
-  width: 48%;
-  border-radius: 10px;
-  object-fit: cover;
-  max-height: 400px;
-}
-
-.hero-text-overlay {
-  position: relative;
-  text-align: center;
-  margin-top: -200px; /* Pull up overlay above images */
-  color: white;
-  background: rgba(0,0,0,0.5);
-  padding: 30px 50px;
-  border-radius: 10px;
-}
-
-.hero-text-overlay h1 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-}
-
-.hero-text-overlay p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-.btn-primary {
-  background-color: #ffd700;
-  color: #004999;
-  padding: 12px 25px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #e6c200;
-}
-
-/* ------------------------------
-   Section Headings
+   Headings
 --------------------------------*/
 h1, h2, h3 {
   color: #004999;
@@ -123,16 +57,16 @@ h2 {
 }
 
 /* ------------------------------
-   Services / Portfolio Grid
+   Project / Service Grid
 --------------------------------*/
-.services-grid, .portfolio-grid {
+.featured-projects, .services-list {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   margin-bottom: 50px;
 }
 
-.service-card, .portfolio-grid img {
+.project, .service-card {
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
@@ -141,65 +75,39 @@ h2 {
   transition: transform 0.2s;
 }
 
-.service-card:hover {
-  transform: scale(1.02);
+.project:hover, .service-card:hover {
+  transform: translateY(-3px);
 }
 
-.service-card img {
+.project-images, .service-card .project-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.project-images img, .service-card .project-images img {
   width: 100%;
-  height: 180px;
+  border-radius: 6px;
   object-fit: cover;
-}
-
-.service-card h3 {
-  margin: 15px;
-  font-size: 1.2em;
-}
-
-.service-card p {
-  margin: 0 15px 15px 15px;
-  font-size: 0.95em;
+  max-height: 150px;
 }
 
 /* ------------------------------
-   Portfolio Grid Images Hover
+   Buttons / CTA
 --------------------------------*/
-.portfolio-grid img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.portfolio-grid img:hover {
-  transform: scale(1.05);
-}
-
-/* ------------------------------
-   Contact Section
---------------------------------*/
-.contact-section {
-  background-color: #fff;
-  padding: 40px 20px;
-  border-radius: 10px;
-  max-width: 800px;
-  margin: 40px auto;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.contact-section p {
-  font-size: 1.1em;
-  margin-bottom: 15px;
-}
-
-.contact-section a {
-  color: #004999;
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #007acc;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
+  border-radius: 4px;
+  margin: 10px 0;
 }
 
-.contact-section a:hover {
-  text-decoration: underline;
+.button:hover {
+  background: #005fa3;
 }
 
 /* ------------------------------
@@ -222,106 +130,67 @@ footer a:hover {
 }
 
 /* ------------------------------
-   Modal Styles
+   Modal
 --------------------------------*/
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 999;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.6);
-  animation: fadeBackground 0.3s;
-}
-
-.modal-content {
-  background-color: white;
-  margin: 5% auto;
-  padding: 2rem;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 700px;
-  max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
   animation: fadeIn 0.3s;
 }
 
-.modal-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 90%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 
-.modal-images img {
+.modal-img {
   width: 100%;
+  max-width: 600px;
   border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  object-fit: contain;
 }
 
-.close-button {
-  color: #aaa;
-  float: right;
-  font-size: 1.5rem;
-  font-weight: bold;
+/* Close button */
+.modal-close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
   cursor: pointer;
-  margin-top: -1rem;
+  font-weight: bold;
 }
 
-.close-button:hover {
-  color: #000;
-}
-
-/* Fade Animations */
+/* Fade-in animation */
 @keyframes fadeIn {
-  from {opacity: 0; transform: translateY(-20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-@keyframes fadeBackground {
   from {opacity: 0;}
   to {opacity: 1;}
 }
 
 /* ------------------------------
-   Responsive Adjustments
+   Responsive
 --------------------------------*/
-@media screen and (max-width: 1024px) {
-  .hero-dual-imgs .hero-img {
-    width: 48%;
-    margin-bottom: 10px;
-  }
-}
-
 @media screen and (max-width: 768px) {
-  .hero-dual-imgs {
-    flex-direction: column;
-    align-items: center;
+  .project-images, .service-card .project-images {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 
-  .hero-dual-imgs .hero-img {
-    width: 100%;
-    max-height: 300px;
-  }
-
-  .hero-text-overlay {
-    margin-top: -150px;
-    padding: 20px;
-  }
-
-  .hero-text-overlay h1 {
-    font-size: 1.8em;
-  }
-
-  .hero-text-overlay p {
-    font-size: 1em;
-  }
-
-  .nav a {
-    margin-left: 10px;
+  .modal-img {
+    max-width: 90%;
   }
 }
