@@ -57,7 +57,7 @@ body {
 /* ------------------------------
    Section Headings
 --------------------------------*/
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: #004999;
 }
 
@@ -76,7 +76,7 @@ h2 {
 /* ------------------------------
    Grid Layout for Projects / Services
 --------------------------------*/
-.featured-projects, .services-grid {
+.services-grid, .featured-projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
@@ -96,7 +96,7 @@ h2 {
   transform: translateY(-4px);
 }
 
-.project h3, .service-card h3 {
+.project h4, .service-card h3 {
   margin: 15px;
   font-size: 1.2em;
 }
