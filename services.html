@@ -2,97 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Services | Engineering & Automation Consulting</title>
+  <title>Services - Nick Reny Engineering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <h1>Services</h1>
-  <p>Engineering solutions from concept to implementation</p>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+<header class="header">
+  <nav class="nav container">
+    <a href="index.html" class="nav-logo">Nick Reny Engineering</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 </header>
 
-<main>
-  <section class="services-intro">
-    <p>
-      My services focus on practical, manufacturable solutions for tooling,
-      automation, facility layout, and equipment integration.
-    </p>
-  </section>
+<main class="container">
+  <h1>Services</h1>
+  <p>We provide practical, manufacturable solutions for tooling, automation, facility layout, and equipment integration.</p>
 
-  <section class="services-grid">
-    <div class="service-card" data-images="assets/12output-manifold.png">
-      <h3>Custom tooling & fixture design</h3>
-      <img src="assets/12output-manifold.png" alt="Custom tooling CAD">
-      <p>Designing fixtures and tooling to fit your process requirements, from concept to production.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="Steel Rule Die">
+      <h3>Steel Rule Die Tooling & Alignment Systems</h3>
+      <p>Design and implement precise steel rule dies with poka-yoke features for repeatable and accurate cutting operations.</p>
     </div>
 
-    <div class="service-card" data-images="assets/poke-yoke-steel-rule-die-alignment.png">
-      <h3>Steel rule die tooling & alignment systems</h3>
-      <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="Steel rule die CAD">
-      <p>Precision die alignment systems with poka-yoke features for consistent, repeatable cutting.</p>
+    <div class="service-card">
+      <img src="assets/12output-manifold.png" alt="Custom Tooling">
+      <h3>Custom Tooling & Fixture Design</h3>
+      <p>Create custom manifolds, clamps, jigs, and specialized tooling tailored to your manufacturing process needs.</p>
     </div>
 
-    <div class="service-card" data-images="assets/lab-layout.png">
-      <h3>Process & facility layout optimization</h3>
-      <img src="assets/lab-layout.png" alt="Lab layout CAD">
-      <p>Optimizing your facility layout and process flow for efficiency and safety.</p>
+    <div class="service-card">
+      <img src="assets/lab-layout.png" alt="Facility Layout">
+      <h3>Process & Facility Layout Optimization</h3>
+      <p>Plan and optimize your manufacturing or lab facility layout for efficiency, safety, and workflow improvements.</p>
     </div>
 
-    <div class="service-card" data-images="assets/automated-4probe-resistance-assembly.png">
-      <h3>Low-cost automation and poka-yoke systems</h3>
-      <img src="assets/automated-4probe-resistance-assembly.png" alt="Automation CAD">
-      <p>Custom automation solutions with error-proofing features to improve yield and reduce labor.</p>
+    <div class="service-card">
+      <img src="assets/automated-4probe-resistance-assembly.png" alt="Automation">
+      <h3>Low-Cost Automation & Poka-Yoke Systems</h3>
+      <p>Implement simple, reliable automation solutions and error-proofing systems to increase throughput and reduce mistakes.</p>
     </div>
 
-    <div class="service-card" data-images="assets/machine-sensor-integration.png">
-      <h3>Vendor coordination & equipment integration support</h3>
-      <img src="assets/machine-sensor-integration.png" alt="Sensor integration CAD">
-      <p>Managing vendors and integrating equipment into your processes for smooth implementation.</p>
+    <div class="service-card">
+      <img src="assets/12-ouput-argon-manifold-real.jpeg" alt="Vendor Integration">
+      <h3>Vendor Coordination & Equipment Integration</h3>
+      <p>Support for integrating purchased equipment, coordinating vendors, and ensuring smooth installation into your facility.</p>
     </div>
-  </section>
+  </div>
 </main>
 
-<footer>
-  <p>&copy; 2026 Engineering & Automation Consulting</p>
+<footer class="footer container">
+  <p>&copy; 2026 Nick Reny Engineering</p>
+  <p><a href="contact.html">Contact Us</a></p>
 </footer>
-
-<!-- Modal -->
-<div id="modal" class="modal">
-  <span class="modal-close">&times;</span>
-  <div class="modal-content" id="modal-content">
-    <!-- Images inserted dynamically -->
-  </div>
-</div>
-
-<script>
-  const modal = document.getElementById('modal');
-  const modalContent = document.getElementById('modal-content');
-  const modalClose = document.querySelector('.modal-close');
-
-  document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const images = card.dataset.images.split(',');
-      modalContent.innerHTML = '';
-      images.forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        img.className = 'modal-img';
-        modalContent.appendChild(img);
-      });
-      modal.style.display = 'flex';
-    });
-  });
-
-  modalClose.onclick = () => { modal.style.display = 'none'; }
-  window.onclick = e => { if(e.target === modal) modal.style.display = 'none'; }
-</script>
 
 </body>
 </html>
