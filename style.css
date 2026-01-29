@@ -49,86 +49,33 @@ header, nav {
 }
 
 /* ------------------------------
-   Hero Section: Dual Images
+   Hero Section
 --------------------------------*/
-.hero-dual {
-  position: relative;
-  margin-bottom: 50px;
-}
-
-.hero-dual-imgs {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.hero-dual-imgs .hero-img {
-  width: 48%;
-  border-radius: 10px;
-  object-fit: cover;
-  max-height: 400px;
-}
-
-.hero-text-overlay {
-  position: relative;
+.hero {
   text-align: center;
-  margin-top: -200px; /* Pull up overlay above images */
-  color: white;
-  background: rgba(0,0,0,0.5);
-  padding: 30px 50px;
-  border-radius: 10px;
+  padding: 60px 20px 40px 20px;
 }
 
-.hero-text-overlay h1 {
+.hero h1 {
   font-size: 2.5em;
   margin-bottom: 15px;
+  color: #004999;
 }
 
-.hero-text-overlay p {
+.hero p {
   font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-.btn-primary {
-  background-color: #ffd700;
-  color: #004999;
-  padding: 12px 25px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #e6c200;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* ------------------------------
-   Section Headings
---------------------------------*/
-h1, h2, h3 {
-  color: #004999;
-}
-
-h1 {
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-
-h2 {
-  margin-top: 50px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-/* ------------------------------
-   Services Grid (Home Page)
+   Services / Featured Work Grid
 --------------------------------*/
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(180px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
   margin-bottom: 50px;
 }
 
@@ -137,132 +84,92 @@ h2 {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  flex: 1 1 250px;
+  max-width: 300px;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+  transform: scale(1.03);
 }
 
 .service-card img {
   width: 100%;
-  height: 140px;
+  height: 180px;
   object-fit: cover;
 }
 
 .service-card h3 {
-  margin: 10px;
-  font-size: 1.1em;
-  text-align: center;
+  margin: 15px;
+  font-size: 1.2em;
 }
 
 .service-card p {
-  margin: 0 10px 10px 10px;
+  margin: 0 15px 15px 15px;
   font-size: 0.95em;
-  text-align: center;
 }
 
 /* ------------------------------
-   Modal Popups
+   Modals
 --------------------------------*/
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
-  z-index: 1000;
-  padding-top: 60px;
+  z-index: 100;
+  padding-top: 80px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.7);
   animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: #fff;
   margin: auto;
   padding: 20px;
+  max-width: 1000px;
   border-radius: 10px;
-  max-width: 900px;
-  animation: fadeIn 0.3s;
 }
 
 .modal-content h3 {
-  text-align: center;
-  margin-bottom: 20px;
+  margin-top: 0;
+  color: #004999;
 }
 
-.modal-content img {
+.modal-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.modal-images img {
   width: 100%;
-  max-height: 400px;
+  height: 200px;
   object-fit: cover;
-  margin-bottom: 10px;
   border-radius: 6px;
 }
 
-.modal-close {
+/* Close Button */
+.close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: -10px;
 }
 
-.modal-close:hover,
-.modal-close:focus {
-  color: #000;
-}
-
-/* ------------------------------
-   Portfolio / Featured Work Grid
---------------------------------*/
-.portfolio-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  margin-bottom: 50px;
-}
-
-.portfolio-grid img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.portfolio-grid img:hover {
-  transform: scale(1.05);
-}
-
-/* ------------------------------
-   Contact Section
---------------------------------*/
-.contact-section {
-  background-color: #fff;
-  padding: 40px 20px;
-  border-radius: 10px;
-  max-width: 800px;
-  margin: 40px auto;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.contact-section p {
-  font-size: 1.1em;
-  margin-bottom: 15px;
-}
-
-.contact-section a {
-  color: #004999;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.contact-section a:hover {
-  text-decoration: underline;
+.close:hover,
+.close:focus {
+  color: black;
 }
 
 /* ------------------------------
@@ -280,61 +187,20 @@ footer a {
   text-decoration: none;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
 /* ------------------------------
-   Animations
+   Responsive
 --------------------------------*/
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* ------------------------------
-   Responsive Adjustments
---------------------------------*/
-@media screen and (max-width: 1024px) {
-  .hero-dual-imgs .hero-img {
-    width: 48%;
-    margin-bottom: 10px;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  }
-}
-
 @media screen and (max-width: 768px) {
-  .hero-dual-imgs {
+  .services-grid {
     flex-direction: column;
     align-items: center;
   }
 
-  .hero-dual-imgs .hero-img {
-    width: 100%;
-    max-height: 300px;
+  .service-card {
+    max-width: 90%;
   }
 
-  .hero-text-overlay {
-    margin-top: -150px; 
-    padding: 20px;
-  }
-
-  .hero-text-overlay h1 {
-    font-size: 1.8em;
-  }
-
-  .hero-text-overlay p {
-    font-size: 1em;
-  }
-
-  .nav a {
-    margin-left: 10px;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  .modal-images img {
+    height: 150px;
   }
 }
