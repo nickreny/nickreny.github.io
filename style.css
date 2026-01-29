@@ -17,41 +17,35 @@ body {
 }
 
 /* ------------------------------
-   Site Header
+   Navigation
 --------------------------------*/
-.site-header {
-  background-color: #111;
+header, nav {
+  background-color: #004999;
   color: white;
-  padding: 2rem 2rem 1rem 2rem;
-  text-align: center;
+  padding: 15px 0;
 }
 
-.site-header h1 {
-  margin: 0;
-  font-size: 2.2em;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.site-header p {
-  margin: 0.3rem 0 1rem 0;
-  font-size: 1.1em;
-  color: #ddd;
-}
-
-.site-header nav {
-  margin-top: 1rem;
-}
-
-.site-header nav a {
+.nav a {
   color: white;
-  margin: 0 1rem;
   text-decoration: none;
+  margin-left: 20px;
   font-weight: bold;
-  font-size: 1em;
   transition: color 0.3s;
 }
 
-.site-header nav a:hover {
+.nav a:hover {
   color: #ffd700;
+}
+
+.nav-logo {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 /* ------------------------------
@@ -73,78 +67,49 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  margin-bottom: 15px;
+}
+
+h4 {
+  margin: 10px 0;
+  font-size: 1.1em;
+  text-align: center;
+}
+
 /* ------------------------------
-   Grid Layout for Projects / Services
+   Grid Layouts
 --------------------------------*/
-.services-grid, .featured-projects {
+.services-grid, .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin-bottom: 50px;
 }
 
-.project, .service-card {
+.service-card, .project {
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.3s;
 }
 
-.project:hover, .service-card:hover {
-  transform: translateY(-4px);
+.service-card:hover, .project:hover {
+  transform: scale(1.03);
 }
 
-.project h4, .service-card h3 {
-  margin: 15px;
-  font-size: 1.2em;
+.service-card img, .project img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-.project p, .service-card p {
+.service-card p {
   margin: 0 15px 15px 15px;
   font-size: 0.95em;
-}
-
-.project-images img, .service-card img {
-  width: 100%;
-  border-radius: 6px;
-  object-fit: cover;
-  max-height: 200px;
-}
-
-/* ------------------------------
-   CTA Button
---------------------------------*/
-.button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #007acc;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-.button:hover {
-  background: #005fa3;
-}
-
-/* ------------------------------
-   Footer
---------------------------------*/
-footer {
-  padding: 2rem;
   text-align: center;
-  background: #f2f2f2;
-}
-
-footer a {
-  color: #007acc;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
 
 /* ------------------------------
@@ -154,65 +119,103 @@ footer a:hover {
   display: none;
   position: fixed;
   z-index: 1000;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.8);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.8);
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
-  animation: fadeIn 0.3s ease-in-out;
+  padding: 40px 20px;
+  animation: fadeIn 0.3s;
 }
 
 .modal-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px 0;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 1000px;
+  justify-content: center;
 }
 
 .modal-img {
-  max-width: 600px;
-  width: 90%;
-  margin: 15px 0;
+  width: 300px;
+  max-width: 90%;
   border-radius: 6px;
-  object-fit: contain;
 }
 
 .modal-close {
-  position: fixed;
-  top: 20px;
-  right: 30px;
-  font-size: 2rem;
+  position: absolute;
+  top: 15px;
+  right: 25px;
   color: white;
+  font-size: 2em;
   cursor: pointer;
 }
 
+/* Fade in animation */
 @keyframes fadeIn {
-  from {opacity:0;}
-  to {opacity:1;}
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 /* ------------------------------
-   Responsive
+   Contact / Footer
 --------------------------------*/
-@media screen and (max-width: 1024px) {
-  .project-images img, .service-card img {
-    max-height: 180px;
-  }
+.contact-section {
+  background-color: #fff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+.contact-section p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.contact-section a {
+  color: #004999;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #004999;
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------
+   Responsive Adjustments
+--------------------------------*/
 @media screen and (max-width: 768px) {
-  .project-images img, .service-card img {
-    max-height: 150px;
+  .services-grid, .portfolio-grid {
+    grid-template-columns: 1fr;
   }
 
-  .site-header h1 {
-    font-size: 1.8em;
+  .modal-img {
+    width: 80%;
   }
 
-  .site-header p {
-    font-size: 1em;
+  .nav a {
+    margin-left: 10px;
   }
 }
