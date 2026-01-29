@@ -2,7 +2,7 @@
    Base / Body
 --------------------------------*/
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -49,33 +49,91 @@ header, nav {
 }
 
 /* ------------------------------
-   Hero Section
+   Hero Section: Dual Images
 --------------------------------*/
-.hero {
-  text-align: center;
-  padding: 60px 20px 40px 20px;
+.hero-dual {
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
-.hero h1 {
+.hero-dual-imgs {
+  display: flex;
+  gap: 10px;
+  flex: 1 1 60%;
+}
+
+.hero-dual-imgs .hero-img {
+  width: 48%;
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.hero-text-overlay {
+  flex: 1 1 35%;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  padding: 30px 25px;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+}
+
+.hero-text-overlay h1 {
   font-size: 2.5em;
   margin-bottom: 15px;
-  color: #004999;
+  font-weight: 700;
 }
 
-.hero p {
+.hero-text-overlay p {
   font-size: 1.2em;
-  max-width: 800px;
-  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #ffd700;
+  color: #004999;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #e6c200;
 }
 
 /* ------------------------------
-   Services / Featured Work Grid
+   Section Headings
 --------------------------------*/
-.services-grid {
-  display: flex;
-  flex-wrap: wrap;
+h1, h2, h3 {
+  color: #004999;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ------------------------------
+   Services Grid
+--------------------------------*/
+.services-grid, .featured-work {
+  display: grid;
   gap: 20px;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   margin-bottom: 50px;
 }
 
@@ -84,14 +142,13 @@ header, nav {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  flex: 1 1 250px;
-  max-width: 300px;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
 .service-card img {
@@ -111,55 +168,54 @@ header, nav {
 }
 
 /* ------------------------------
-   Modals
+   Portfolio / Modal Images
 --------------------------------*/
 .modal {
   display: none;
   position: fixed;
-  z-index: 100;
+  z-index: 2000;
   padding-top: 80px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  background-color: rgba(0,0,0,0.7);
-  animation: fadeIn 0.3s;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  background-color: rgba(0,0,0,0.75);
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: #fefefe;
   margin: auto;
   padding: 20px;
-  max-width: 1000px;
   border-radius: 10px;
+  width: 90%;
+  max-width: 1000px;
+  animation: fadeIn 0.4s;
 }
 
-.modal-content h3 {
-  margin-top: 0;
-  color: #004999;
+.modal-content img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 5px;
 }
 
 .modal-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .modal-images img {
-  width: 100%;
-  height: 200px;
+  flex: 1 1 calc(33% - 10px);
+  max-width: calc(33% - 10px);
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
 /* Close Button */
-.close {
+.modal-close, .close {
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -167,9 +223,35 @@ header, nav {
   cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
+.modal-close:hover, .close:hover {
   color: black;
+}
+
+/* ------------------------------
+   Contact Section
+--------------------------------*/
+.contact-section {
+  background-color: #fff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contact-section p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.contact-section a {
+  color: #004999;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
 }
 
 /* ------------------------------
@@ -187,20 +269,60 @@ footer a {
   text-decoration: none;
 }
 
+footer a:hover {
+  text-decoration: underline;
+}
+
 /* ------------------------------
-   Responsive
+   Animations
 --------------------------------*/
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* ------------------------------
+   Responsive Adjustments
+--------------------------------*/
+@media screen and (max-width: 1024px) {
+  .hero-dual-imgs .hero-img {
+    width: 48%;
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .services-grid {
+  .hero-dual {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
-  .service-card {
-    max-width: 90%;
+  .hero-dual-imgs .hero-img {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .hero-text-overlay {
+    margin-top: 0;
+    padding: 20px;
+    width: 90%;
+  }
+
+  .hero-text-overlay h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-text-overlay p {
+    font-size: 1em;
+  }
+
+  .services-grid, .featured-work {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   .modal-images img {
-    height: 150px;
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
