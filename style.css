@@ -48,76 +48,61 @@ header, nav {
   font-weight: bold;
 }
 
-/* ------------------------------
-   Hero Dual Photos with Side Overlay
---------------------------------*/
+/* Hero Dual Section */
 .hero-dual {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 30px;
+  flex-direction: column; /* stack images then text */
+  align-items: flex-start; /* align overlay to the left */
   margin-bottom: 50px;
 }
 
 .hero-dual-imgs {
-  flex: 1;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .hero-dual-imgs .hero-img {
-  width: 100%;
+  width: 48%;
   border-radius: 10px;
   object-fit: cover;
-  max-height: 300px; /* limits the photo height */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  max-height: 400px;
 }
 
+/* Overlay below images, left-aligned */
 .hero-text-overlay.side-overlay {
-  flex: 1;
-  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.85); /* light transparent background */
   color: #004999;
+  padding: 25px 30px;
+  border-radius: 10px;
+  margin-top: 20px; /* distance from photos */
+  max-width: 600px;
+  font-family: 'Arial', sans-serif; /* modern clean font */
 }
 
 .hero-text-overlay.side-overlay h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5em;
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 .hero-text-overlay.side-overlay p {
   font-size: 1.1em;
-  line-height: 1.5;
-  margin-bottom: 20px;
+  line-height: 1.4;
+  margin-bottom: 15px;
 }
 
 .hero-text-overlay.side-overlay .btn-primary {
-  display: inline-block;
   background-color: #ffd700;
   color: #004999;
-  padding: 12px 25px;
+  padding: 10px 20px;
   border-radius: 5px;
-  font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s;
+  font-weight: bold;
 }
 
 .hero-text-overlay.side-overlay .btn-primary:hover {
   background-color: #e6c200;
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 1024px) {
-  .hero-dual {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-text-overlay.side-overlay {
-    text-align: center;
-  }
 }
 
 /* ------------------------------
