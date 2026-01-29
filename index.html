@@ -11,7 +11,6 @@
 <header class="site-header">
   <h1>Engineering & Automation Consulting</h1>
   <p>Custom tooling, automation, and equipment integration</p>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -20,146 +19,95 @@
 </header>
 
 <main>
-<section class="intro">
-  <h2>Practical Engineering. Real-World Execution.</h2>
-  <p>
-    I provide hands-on engineering consulting focused on custom tooling,
-    automation systems, facility integration, and equipment support.
-    From early concept and CAD through fabrication, installation,
-    and vendor coordination.
-  </p>
-</section>
-
-<section class="featured-projects">
-
-  <h2>Featured Work</h2>
-
-  <!-- Each project -->
-  <section class="project" onclick="openModal(this)">
-    <h3>12-Output Argon Manifold</h3>
-    <p>Custom manifold design for precise gas distribution.</p>
-    <div class="project-images">
-      <img src="assets/12output-manifold.png" alt="CAD 12-output manifold">
-      <img src="assets/images/tooling/12-ouput-argon-manifold-real.jpeg" alt="Real 12-output manifold">
-    </div>
+  <section class="intro">
+    <h2>Practical Engineering. Real-World Execution.</h2>
+    <p>
+      I provide hands-on engineering consulting focused on custom tooling,
+      automation systems, facility integration, and equipment support.
+      From early concept and CAD through fabrication, installation,
+      and vendor coordination.
+    </p>
   </section>
 
-  <section class="project" onclick="openModal(this)">
-    <h3>6-Output Air Manifold</h3>
-    <p>Compact manifold for pneumatic applications.</p>
-    <div class="project-images">
-      <img src="assets/custom-dual-manifold.png" alt="CAD dual manifold">
-      <img src="assets/images/tooling/6-output-airmanifold1-real.jpeg" alt="6-output air manifold">
-      <img src="assets/images/tooling/6-output-airmanifold2-real.jpeg" alt="6-output air manifold">
-    </div>
+  <section class="featured-projects">
+    <h2>Featured Work</h2>
+
+    <!-- TOOLING -->
+    <section class="project-category">
+      <h3>Tooling</h3>
+
+      <div class="services-grid">
+        <div class="project" data-images="assets/12output-manifold.png,assets/12-ouput-argon-manifold-real.jpeg">
+          <h4>12-Output Argon Manifold</h4>
+          <img src="assets/12output-manifold.png" alt="CAD 12 output manifold">
+          <img src="assets/12-ouput-argon-manifold-real.jpeg" alt="Real 12 output manifold">
+        </div>
+
+        <div class="project" data-images="assets/cylindrical-tooling.png,assets/steel-rule-die-doublecavity-withalignmentpins-real.jpeg">
+          <h4>Steel Rule Die Alignment</h4>
+          <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="CAD steel rule die alignment">
+          <img src="assets/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Steel rule die real">
+        </div>
+
+        <div class="project" data-images="assets/custom-dual-manifold.png,assets/6-output-airmanifold1-real.jpeg,assets/6-output-airmanifold2-real.jpeg">
+          <h4>6-Output Air Manifold</h4>
+          <img src="assets/custom-dual-manifold.png" alt="CAD 6-output air manifold">
+          <img src="assets/6-output-airmanifold1-real.jpeg" alt="6-output air manifold real">
+          <img src="assets/6-output-airmanifold2-real.jpeg" alt="6-output air manifold real">
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTOMATION -->
+    <section class="project-category">
+      <h3>Automation</h3>
+      <div class="services-grid">
+        <div class="project" data-images="assets/automated-4probe-resistance-assembly.png,assets/finalized-probe-pressmachine-real.jpeg">
+          <h4>Automated Probe Press Machine</h4>
+          <img src="assets/automated-4probe-resistance-assembly.png" alt="CAD probe press machine">
+          <img src="assets/finalized-probe-pressmachine-real.jpeg" alt="Real probe press machine">
+        </div>
+
+        <div class="project" data-images="assets/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg">
+          <h4>Laser Welding Cobot System</h4>
+          <img src="assets/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg" alt="Laser welding cobot system">
+        </div>
+      </div>
+    </section>
+
+    <!-- FACILITY / LAB -->
+    <section class="project-category">
+      <h3>Facility / Lab / Layout</h3>
+      <div class="services-grid">
+        <div class="project" data-images="assets/lab-layout.png">
+          <h4>Lab Layout Planning</h4>
+          <img src="assets/lab-layout.png" alt="Lab layout CAD">
+        </div>
+
+        <div class="project" data-images="assets/lab-walkthrough-custom-piping.png,assets/automated-blastgate-measureroom-diffpressure-real.jpeg,assets/mounted-automated-blastgate-4inchduct-inlab-real.jpeg">
+          <h4>Automated Blast Gate System</h4>
+          <img src="assets/lab-walkthrough-custom-piping.png" alt="CAD blast gate">
+          <img src="assets/automated-blastgate-measureroom-diffpressure-real.jpeg" alt="Real blast gate 1">
+          <img src="assets/mounted-automated-blastgate-4inchduct-inlab-real.jpeg" alt="Real blast gate 2">
+        </div>
+
+        <div class="project" data-images="assets/precision-clamping-thickness-measurement-electromechanical.png,assets/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg">
+          <h4>Precision Calibration Stand</h4>
+          <img src="assets/precision-clamping-thickness-measurement-electromechanical.png" alt="CAD calibration stand">
+          <img src="assets/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg" alt="Real calibration stand">
+        </div>
+      </div>
+    </section>
   </section>
 
-  <section class="project" onclick="openModal(this)">
-    <h3>Steel Rule Die Alignment System</h3>
-    <p>Precision double-cavity die with poka-yoke alignment.</p>
-    <div class="project-images">
-      <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="CAD steel rule die alignment">
-      <img src="assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Steel rule die real">
-      <img src="assets/precision-clamping-thickness-measurement-electromechanical.png" alt="CAD clamping measurement">
-    </div>
+  <section class="cta">
+    <h2>Need Engineering Support?</h2>
+    <p>
+      Whether you need tooling, automation, facility layout, or
+      equipment integration support, I can help.
+    </p>
+    <a class="button" href="services.html">View Services</a>
   </section>
-
-  <section class="project" onclick="openModal(this)">
-    <h3>Probe Press Machine</h3>
-    <p>Custom automated press for precise probe insertion.</p>
-    <div class="project-images">
-      <img src="assets/automated-4probe-resistance-assembly.png" alt="Probe assembly CAD">
-      <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" alt="Probe press real">
-      <img src="assets/machine-sensor-integration.png" alt="Machine sensor CAD">
-    </div>
-  </section>
-
-  <section class="project" onclick="openModal(this)">
-    <h3>Laser Cobot System</h3>
-    <p>Automated laser welding with collaborative robot.</p>
-    <div class="project-images">
-      <img src="assets/images/automation/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg" alt="Laser Cobot real">
-    </div>
-  </section>
-
-  <section class="project" onclick="openModal(this)">
-    <h3>Automated Blast Gate System</h3>
-    <p>Lab airflow control and differential pressure management.</p>
-    <div class="project-images">
-      <img src="assets/images/facility/automated-blastgate-measureroom-diffpressure-real.jpeg" alt="Blast gate real">
-      <img src="assets/images/facility/mounted-automated-blastgate-4inchduct-inlab-real.jpeg" alt="Blast gate mounted real">
-    </div>
-  </section>
-
-  <section class="project" onclick="openModal(this)">
-    <h3>Calibration Stand</h3>
-    <p>Granite-based stand for precise measurement and calibration.</p>
-    <div class="project-images">
-      <img src="assets/precision-clamping-thickness-measurement-electromechanical.png" alt="CAD calibration setup">
-      <img src="assets/images/equipment/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg" alt="Calibration stand real">
-      <img src="assets/images/equipment/calibration-stand-cad.png" alt="CAD calibration stand">
-    </div>
-  </section>
-
-  <section class="project" onclick="openModal(this)">
-    <h3>Custom Active Cooling Assembly</h3>
-    <p>Thermal management for high-precision equipment.</p>
-    <div class="project-images">
-      <img src="assets/custom-active-cooling-assembly.png" alt="Active cooling CAD">
-    </div>
-  </section>
-
-  <section class="project" onclick="openModal(this)">
-    <h3>Custom Machine Enclosure / Tank</h3>
-    <p>Protective enclosure for process equipment.</p>
-    <div class="project-images">
-      <img src="assets/custom-machine-enclosure-tank.png" alt="Machine enclosure CAD">
-    </div>
-  </section>
-
-  <section class="project" onclick="openModal(this)">
-    <h3>Lab Layout</h3>
-    <p>Optimized facility layout for equipment and workflow.</p>
-    <div class="project-images">
-      <img src="assets/lab-layout.png" alt="Lab layout CAD">
-    </div>
-  </section>
-
-  <section class="project" onclick="openModal(this)">
-    <h3>Lab Custom Gas Piping</h3>
-    <p>Custom piping for lab utilities and gas distribution.</p>
-    <div class="project-images">
-      <img src="assets/lab-custom-gas-piping.png" alt="Lab piping CAD">
-      <img src="assets/lab-walkthrough-custom-piping.png" alt="Lab walkthrough CAD">
-    </div>
-  </section>
-
-  <section class="project" onclick="openModal(this)">
-    <h3>Cylindrical Tooling</h3>
-    <p>Specialized tooling for cylindrical components.</p>
-    <div class="project-images">
-      <img src="assets/cylindrical-tooling.png" alt="Cylindrical tooling CAD">
-    </div>
-  </section>
-
-  <section class="project" onclick="openModal(this)">
-    <h3>Machine Sensor Integration</h3>
-    <p>Custom sensor integration for automated monitoring.</p>
-    <div class="project-images">
-      <img src="assets/machine-sensor-integration.png" alt="Sensor integration CAD">
-    </div>
-  </section>
-
-</section>
-
-<section class="cta">
-  <h2>Need Engineering Support?</h2>
-  <p>
-    Whether you need tooling, automation, facility layout, or
-    equipment integration support, I can help.
-  </p>
-  <a class="button" href="services.html">View Services</a>
-</section>
 
 </main>
 
@@ -168,30 +116,34 @@
 </footer>
 
 <!-- Modal -->
-<div id="modal" class="modal" onclick="closeModal()">
+<div id="modal" class="modal">
   <span class="modal-close">&times;</span>
-  <div class="modal-content"></div>
+  <div class="modal-content" id="modal-content">
+    <!-- Images inserted dynamically -->
+  </div>
 </div>
 
 <script>
-function openModal(project) {
   const modal = document.getElementById('modal');
-  const content = modal.querySelector('.modal-content');
-  content.innerHTML = '';
-  const imgs = project.querySelectorAll('img');
-  imgs.forEach(img => {
-    const newImg = document.createElement('img');
-    newImg.src = img.src;
-    newImg.alt = img.alt;
-    newImg.classList.add('modal-img');
-    content.appendChild(newImg);
-  });
-  modal.style.display = 'flex';
-}
+  const modalContent = document.getElementById('modal-content');
+  const modalClose = document.querySelector('.modal-close');
 
-function closeModal() {
-  document.getElementById('modal').style.display = 'none';
-}
+  document.querySelectorAll('.project').forEach(project => {
+    project.addEventListener('click', () => {
+      const images = project.dataset.images.split(',');
+      modalContent.innerHTML = '';
+      images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.className = 'modal-img';
+        modalContent.appendChild(img);
+      });
+      modal.style.display = 'flex';
+    });
+  });
+
+  modalClose.onclick = () => { modal.style.display = 'none'; }
+  window.onclick = e => { if(e.target === modal) modal.style.display = 'none'; }
 </script>
 
 </body>
