@@ -5,6 +5,80 @@
   <title>Nick Reny Engineering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Modal Overrides */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      background-color: rgba(0,0,0,0.8);
+      animation: fadeIn 0.3s;
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+    }
+    .modal-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .modal-images img {
+      width: calc(50% - 10px);
+      height: auto;
+      border-radius: 5px;
+    }
+    .modal-close {
+      float: right;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: #004999;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    /* Hero overlay */
+    .hero-dual-imgs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .hero-dual-imgs .hero-img {
+      width: 48%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .hero-text-overlay {
+      position: relative;
+      text-align: center;
+      margin-top: -220px;
+      color: white;
+      background: rgba(0,0,0,0.5);
+      padding: 30px 50px;
+      border-radius: 10px;
+    }
+    @media screen and (max-width: 768px) {
+      .hero-dual-imgs .hero-img {
+        width: 100%;
+        max-height: 250px;
+      }
+      .hero-text-overlay {
+        margin-top: -150px;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -23,8 +97,8 @@
 <!-- Hero Section -->
 <section class="hero-dual container">
   <div class="hero-dual-imgs">
-    <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="CAD steel rule die" class="hero-img">
-    <img src="assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Real steel rule die" class="hero-img">
+    <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="Steel Rule CAD" class="hero-img">
+    <img src="assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Steel Rule Real" class="hero-img">
   </div>
   <div class="hero-text-overlay">
     <h1>Practical Engineering. Real-World Execution.</h1>
@@ -32,44 +106,39 @@
   </div>
 </section>
 
-<!-- Featured Services Grid -->
+<!-- Featured Services -->
 <section class="featured-work container">
-  <h2>Featured Services</h2>
+  <h2>Our Services</h2>
   <div class="services-grid">
 
-    <!-- Service 1 -->
+    <!-- 1: Custom Tooling -->
     <div class="service-card" onclick="openModal('modal-tooling')">
       <h3>Custom Tooling & Fixture Design</h3>
-      <p>Precise and manufacturable tooling solutions for any production need.</p>
-      <img src="assets/12output-manifold.png" alt="Custom tooling CAD">
+      <p>Precise, manufacturable tooling solutions for production needs.</p>
     </div>
 
-    <!-- Service 2 -->
+    <!-- 2: Steel Rule Die -->
     <div class="service-card" onclick="openModal('modal-die')">
       <h3>Steel Rule Die Tooling & Alignment Systems</h3>
       <p>Repeatable cutting operations with precision alignment and poka-yoke features.</p>
-      <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="Steel rule die CAD">
     </div>
 
-    <!-- Service 3 -->
-    <div class="service-card" onclick="openModal('modal-layout')">
+    <!-- 3: Facility Layout -->
+    <div class="service-card" onclick="openModal('modal-facility')">
       <h3>Process & Facility Layout Optimization</h3>
       <p>Optimize workflows, lab layouts, and airflow for maximum efficiency.</p>
-      <img src="assets/lab-layout.png" alt="Facility layout CAD">
     </div>
 
-    <!-- Service 4 -->
+    <!-- 4: Automation -->
     <div class="service-card" onclick="openModal('modal-automation')">
       <h3>Low-Cost Automation & Poka-Yoke Systems</h3>
       <p>Automated systems and smart tooling to prevent errors and boost productivity.</p>
-      <img src="assets/automated-4probe-resistance-assembly.png" alt="Automation CAD">
     </div>
 
-    <!-- Service 5 -->
+    <!-- 5: Vendor Coordination -->
     <div class="service-card" onclick="openModal('modal-vendor')">
       <h3>Vendor Coordination & Equipment Integration</h3>
       <p>Seamless integration and coordination with vendors for turnkey solutions.</p>
-      <img src="assets/custom-machine-enclosure-tank.png" alt="Vendor integration CAD">
     </div>
 
   </div>
@@ -77,47 +146,46 @@
 
 <!-- Modals -->
 
-<!-- Tooling Modal -->
+<!-- Custom Tooling Modal -->
 <div id="modal-tooling" class="modal">
   <div class="modal-content">
     <span class="modal-close" onclick="closeModal('modal-tooling')">&times;</span>
     <h3>Custom Tooling & Fixture Design</h3>
     <div class="modal-images">
-      <img src="assets/12output-manifold.png" alt="12 output manifold CAD">
-      <img src="assets/images/tooling/12-ouput-argon-manifold-real.jpeg" alt="12 output manifold real">
-      <img src="assets/images/tooling/6-output-airmanifold1-real.jpeg" alt="6 output air manifold 1">
-      <img src="assets/images/tooling/6-output-airmanifold2-real.jpeg" alt="6 output air manifold 2">
-      <img src="assets/custom-dual-manifold.png" alt="Custom dual manifold CAD">
-      <img src="assets/custom-pumptank-closeup.png" alt="Pump tank closeup CAD">
       <img src="assets/cylindrical-tooling.png" alt="Cylindrical tooling CAD">
+      <img src="assets/machine-sensor-integration.png" alt="Machine sensor integration CAD">
+      <img src="assets/precision-clamping-thickness-measurement-electromechanical.png" alt="Precision clamping CAD">
+      <img src="assets/images/tooling/calibration-stand-assembly-closeup-real.jpeg" alt="Calibration stand closeup">
     </div>
   </div>
 </div>
 
-<!-- Steel Rule Die Modal -->
+<!-- Steel Rule Modal -->
 <div id="modal-die" class="modal">
   <div class="modal-content">
     <span class="modal-close" onclick="closeModal('modal-die')">&times;</span>
     <h3>Steel Rule Die Tooling & Alignment Systems</h3>
     <div class="modal-images">
-      <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="Steel rule die CAD">
+      <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="CAD steel rule die">
       <img src="assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Steel rule die real">
-      <img src="assets/precision-clamping-thickness-measurement-electromechanical.png" alt="Precision clamping CAD">
     </div>
   </div>
 </div>
 
-<!-- Facility Modal -->
-<div id="modal-layout" class="modal">
+<!-- Facility Layout Modal -->
+<div id="modal-facility" class="modal">
   <div class="modal-content">
-    <span class="modal-close" onclick="closeModal('modal-layout')">&times;</span>
+    <span class="modal-close" onclick="closeModal('modal-facility')">&times;</span>
     <h3>Process & Facility Layout Optimization</h3>
     <div class="modal-images">
+      <img src="assets/12output-manifold.png" alt="12 output manifold CAD">
+      <img src="assets/custom-dual-manifold.png" alt="Custom dual manifold CAD">
       <img src="assets/lab-layout.png" alt="Lab layout CAD">
       <img src="assets/lab-walkthrough-custom-piping.png" alt="Lab walkthrough CAD">
       <img src="assets/lab-custom-gas-piping.png" alt="Custom gas piping CAD">
-      <img src="assets/images/facility/mounted-automated-blastgate-4inchduct-inlab-real.jpeg" alt="Mounted blast gate real">
-      <img src="assets/images/facility/automated-blastgate-measureroom-diffpressure-real.jpeg" alt="Blast gate diff pressure real">
+      <img src="assets/custom-labpiping-drawing.png" alt="Lab piping drawing CAD">
+      <img src="assets/images/facility/air-compressor-installtion-100cfm-real.jpeg" alt="Air compressor real">
+      <img src="assets/images/facility/lab-custom-gas-routing-real.jpeg" alt="Custom gas routing real">
     </div>
   </div>
 </div>
@@ -128,11 +196,12 @@
     <span class="modal-close" onclick="closeModal('modal-automation')">&times;</span>
     <h3>Low-Cost Automation & Poka-Yoke Systems</h3>
     <div class="modal-images">
-      <img src="assets/automated-4probe-resistance-assembly.png" alt="Automated probe press CAD">
-      <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" alt="Finalized probe press machine">
+      <img src="assets/automated-4probe-resistance-assembly.png" alt="Probe press CAD">
       <img src="assets/custom-active-cooling-assembly.png" alt="Custom active cooling CAD">
-      <img src="assets/machine-sensor-integration.png" alt="Machine sensor integration CAD">
-      <img src="assets/images/automation/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg" alt="Laser welding cobot system">
+      <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" alt="Finalized probe press real">
+      <img src="assets/mounted-automated-blastgate-4inchduct-inlab-real.jpeg" alt="Mounted blast gate real">
+      <img src="assets/automated-blastgate-measureroom-diffpressure-real.jpeg" alt="Blast gate real">
+      <img src="assets/images/automation/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg" alt="Laser cobot real">
     </div>
   </div>
 </div>
@@ -144,12 +213,14 @@
     <h3>Vendor Coordination & Equipment Integration</h3>
     <div class="modal-images">
       <img src="assets/custom-machine-enclosure-tank.png" alt="Machine enclosure CAD">
+      <img src="assets/custom-pumptank-closeup.png" alt="Pump tank CAD">
+      <img src="assets/images/equipment/custom-4post-press-3ton-real.jpeg" alt="Custom 4 post press real">
+      <img src="assets/custom-coater-enclosure-real.png" alt="Coater enclosure real">
       <img src="assets/images/equipment/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg" alt="Calibration stand real">
     </div>
   </div>
 </div>
 
-<!-- Modal Scripts -->
 <script>
 function openModal(id) {
   document.getElementById(id).style.display = "block";
@@ -158,17 +229,11 @@ function closeModal(id) {
   document.getElementById(id).style.display = "none";
 }
 window.onclick = function(event) {
-  const modals = document.querySelectorAll('.modal');
-  modals.forEach(modal => {
+  document.querySelectorAll('.modal').forEach(modal => {
     if(event.target === modal) modal.style.display = "none";
   });
-}
+};
 </script>
-
-<!-- Footer -->
-<footer class="footer">
-  <p>&copy; 2026 Nick Reny Engineering</p>
-</footer>
 
 </body>
 </html>
