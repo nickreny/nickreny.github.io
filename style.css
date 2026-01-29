@@ -74,24 +74,37 @@ header, nav {
 }
 
 .hero-text-overlay {
-  flex: 1 1 35%;
-  background: rgba(0, 0, 0, 0.55);
-  color: white;
-  padding: 30px 25px;
-  border-radius: 10px;
-  font-family: 'Arial', sans-serif;
-  text-align: left;
+  position: absolute; /* floating over images */
+  top: 20%;
+  left: 5%; /* move it slightly to the left side */
+  max-width: 400px;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent dark overlay */
+  color: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  transition: all 0.3s ease;
 }
 
 .hero-text-overlay h1 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
+  font-size: 2.2em;
   font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.2;
 }
 
 .hero-text-overlay p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+/* Optional: subtle hover effect */
+.hero-text-overlay:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
 }
 
 .btn-primary {
