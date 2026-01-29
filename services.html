@@ -11,7 +11,6 @@
 <header class="site-header">
   <h1>Services</h1>
   <p>Engineering solutions from concept to implementation</p>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -20,71 +19,44 @@
 </header>
 
 <main>
+  <section class="services-intro">
+    <p>
+      My services focus on practical, manufacturable solutions for tooling,
+      automation, facility layout, and equipment integration.
+    </p>
+  </section>
 
-<section class="services-intro">
-  <p>
-    Services are focused on practical, manufacturable solutions.
-    Engagements range from individual tooling designs to full
-    system integration and vendor coordination.
-  </p>
-</section>
-
-<ul class="services-list">
-
-  <li class="service-card" onclick="openModal(this)">
-    <h3>Custom tooling & fixture design</h3>
-    <div class="project-images">
-      <img src="assets/images/tooling/12output-manifold.png" alt="CAD 12-output-manifold">
-      <img src="assets/images/tooling/12-ouput-argon-manifold-real.jpeg" alt="Real 12-output-manifold">
-      <img src="assets/images/tooling/6-output-airmanifold1-real.jpeg" alt="6-output-air-manifold">
-      <img src="assets/images/tooling/6-output-airmanifold2-real.jpeg" alt="6-output-air-manifold">
-      <img src="assets/images/tooling/custom-pumptank-closeup.png" alt="Custom pump tank CAD">
+  <section class="services-grid">
+    <div class="service-card" data-images="assets/12output-manifold.png">
+      <h3>Custom tooling & fixture design</h3>
+      <img src="assets/12output-manifold.png" alt="Custom tooling CAD">
+      <p>Designing fixtures and tooling to fit your process requirements, from concept to production.</p>
     </div>
-  </li>
 
-  <li class="service-card" onclick="openModal(this)">
-    <h3>Steel rule die tooling & alignment systems</h3>
-    <div class="project-images">
-      <img src="assets/images/tooling/poke-yoke-steel-rule-die-alignment.png" alt="CAD steel rule die">
-      <img src="assets/images/tooling/steel-rule-die-doublecavity-withalignmentpins-real.jpeg" alt="Steel rule die real">
-      <img src="assets/images/tooling/cylindrical-tooling.png" alt="Cylindrical tooling CAD">
+    <div class="service-card" data-images="assets/poke-yoke-steel-rule-die-alignment.png">
+      <h3>Steel rule die tooling & alignment systems</h3>
+      <img src="assets/poke-yoke-steel-rule-die-alignment.png" alt="Steel rule die CAD">
+      <p>Precision die alignment systems with poka-yoke features for consistent, repeatable cutting.</p>
     </div>
-  </li>
 
-  <li class="service-card" onclick="openModal(this)">
-    <h3>Process & facility layout optimization</h3>
-    <div class="project-images">
-      <img src="assets/images/facility/lab-layout.png" alt="Lab layout CAD">
-      <img src="assets/images/facility/lab-custom-gas-piping.png" alt="Lab gas piping CAD">
-      <img src="assets/images/facility/lab-walkthrough-custom-piping.png" alt="Lab walkthrough CAD">
+    <div class="service-card" data-images="assets/lab-layout.png">
+      <h3>Process & facility layout optimization</h3>
+      <img src="assets/lab-layout.png" alt="Lab layout CAD">
+      <p>Optimizing your facility layout and process flow for efficiency and safety.</p>
     </div>
-  </li>
 
-  <li class="service-card" onclick="openModal(this)">
-    <h3>Low-cost automation and poka-yoke systems</h3>
-    <div class="project-images">
-      <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" alt="Probe press">
-      <img src="assets/images/automation/laserweld-cobot-systemsetup-for-automated-welding-real.jpeg" alt="Laser Cobot system">
-      <img src="assets/images/automation/automated-4probe-resistance-assembly.png" alt="4-probe assembly CAD">
-      <img src="assets/images/automation/machine-sensor-integration.png" alt="Machine sensor CAD">
+    <div class="service-card" data-images="assets/automated-4probe-resistance-assembly.png">
+      <h3>Low-cost automation and poka-yoke systems</h3>
+      <img src="assets/automated-4probe-resistance-assembly.png" alt="Automation CAD">
+      <p>Custom automation solutions with error-proofing features to improve yield and reduce labor.</p>
     </div>
-  </li>
 
-  <li class="service-card" onclick="openModal(this)">
-    <h3>Vendor coordination & equipment integration support</h3>
-    <div class="project-images">
-      <img src="assets/images/facility/automated-blastgate-measureroom-diffpressure-real.jpeg" alt="Blast gate real">
-      <img src="assets/images/facility/mounted-automated-blastgate-4inchduct-inlab-real.jpeg" alt="Blast gate mounted">
-      <img src="assets/images/equipment/calibration-stand-cad.png" alt="Calibration stand CAD">
-      <img src="assets/images/equipment/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg" alt="Calibration stand real">
-      <img src="assets/images/equipment/custom-active-cooling-assembly.png" alt="Active cooling CAD">
-      <img src="assets/images/equipment/custom-machine-enclosure-tank.png" alt="Machine enclosure CAD">
-      <img src="assets/images/equipment/custom-dual-manifold.png" alt="Dual manifold CAD">
+    <div class="service-card" data-images="assets/machine-sensor-integration.png">
+      <h3>Vendor coordination & equipment integration support</h3>
+      <img src="assets/machine-sensor-integration.png" alt="Sensor integration CAD">
+      <p>Managing vendors and integrating equipment into your processes for smooth implementation.</p>
     </div>
-  </li>
-
-</ul>
-
+  </section>
 </main>
 
 <footer>
@@ -92,30 +64,34 @@
 </footer>
 
 <!-- Modal -->
-<div id="modal" class="modal" onclick="closeModal()">
+<div id="modal" class="modal">
   <span class="modal-close">&times;</span>
-  <div class="modal-content"></div>
+  <div class="modal-content" id="modal-content">
+    <!-- Images inserted dynamically -->
+  </div>
 </div>
 
 <script>
-function openModal(card) {
   const modal = document.getElementById('modal');
-  const content = modal.querySelector('.modal-content');
-  content.innerHTML = '';
-  const imgs = card.querySelectorAll('img');
-  imgs.forEach(img => {
-    const newImg = document.createElement('img');
-    newImg.src = img.src;
-    newImg.alt = img.alt;
-    newImg.classList.add('modal-img');
-    content.appendChild(newImg);
-  });
-  modal.style.display = 'flex';
-}
+  const modalContent = document.getElementById('modal-content');
+  const modalClose = document.querySelector('.modal-close');
 
-function closeModal() {
-  document.getElementById('modal').style.display = 'none';
-}
+  document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const images = card.dataset.images.split(',');
+      modalContent.innerHTML = '';
+      images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.className = 'modal-img';
+        modalContent.appendChild(img);
+      });
+      modal.style.display = 'flex';
+    });
+  });
+
+  modalClose.onclick = () => { modal.style.display = 'none'; }
+  window.onclick = e => { if(e.target === modal) modal.style.display = 'none'; }
 </script>
 
 </body>
