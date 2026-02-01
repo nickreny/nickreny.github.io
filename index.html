@@ -21,16 +21,29 @@
   </nav>
 </header>
 
-<!-- Hero Section: Dual Photos with Side Overlay -->
-<section class="hero-dual container">
-  <div class="hero-dual-imgs">
-    <img src="assets/custom-active-cooling-assembly.png" alt="Active Cooling Assembly" class="hero-img">
-    <img src="assets/images/tooling/calibration-stand-assembly-closeup-real.jpeg" alt="Calibration Stand Close-up" class="hero-img">
+<!-- Hero Slideshow Section -->
+<section class="hero-slideshow">
+  <div class="hero-slides">
+
+    <img src="assets/lab-custom-gas-piping.png" class="hero-slide active" alt="Facility gas piping">
+    <img src="assets/images/facility/lab-custom-gas-routing-real.jpeg" class="hero-slide" alt="Facility routing">
+    <img src="assets/images/facility/air-compressor-installtion-100cfm-real.jpeg" class="hero-slide" alt="Air compressor install">
+    <img src="assets/automated-4probe-resistance-assembly.png" class="hero-slide" alt="Automated probe assembly">
+    <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" class="hero-slide" alt="Probe press automation">
+    <img src="assets/custom-dual-manifold.png" class="hero-slide" alt="Custom manifold">
+    <img src="assets/images/tooling/12-ouput-argon-manifold-real.jpeg" class="hero-slide" alt="Argon manifold">
+    <img src="assets/images/tooling/calibration-stand-assembly-closeup-real.jpeg" class="hero-slide" alt="Calibration stand">
+
   </div>
-  <div class="hero-text-overlay side-overlay">
-    <h1>Hands-On Engineering. Real-World Impact.</h1>
-    <p>We design and implement custom tooling, low-cost automation, and facility solutions that streamline manufacturing and boost productivity.</p>
-    <a href="#featured-services" class="btn-primary">Explore Our Services</a>
+
+  <!-- Text Content BELOW image, left aligned -->
+  <div class="hero-content container">
+    <h1>Hands-On Engineering.<br>Built for the Real World.</h1>
+    <p>
+      Custom tooling, low-cost automation, facility integration, and equipment support —
+      engineered to work on the shop floor, not just on paper.
+    </p>
+    <a href="#featured-services" class="btn-primary">Explore Services</a>
   </div>
 </section>
 
@@ -168,6 +181,18 @@
   <p>&copy; 2026 Nick Reny Engineering</p>
 </footer>
 
+<!-- Hero slideshow script -->
+  <script>
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 6000); // change image every 6 seconds
+  </script>
+  
 <script>
 // Modal open/close
 document.querySelectorAll('.service-card').forEach(card => {
