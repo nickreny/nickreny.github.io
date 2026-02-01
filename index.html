@@ -21,20 +21,29 @@
   </nav>
 </header>
 
-<!-- Hero Slideshow Section -->
-<section class="hero-slideshow">
-  <div class="hero-slides">
-
-    <img src="assets/lab-custom-gas-piping.png" class="hero-slide active" alt="Facility gas piping">
-    <img src="assets/images/facility/lab-custom-gas-routing-real.jpeg" class="hero-slide" alt="Facility routing">
-    <img src="assets/images/facility/air-compressor-installtion-100cfm-real.jpeg" class="hero-slide" alt="Air compressor install">
-    <img src="assets/automated-4probe-resistance-assembly.png" class="hero-slide" alt="Automated probe assembly">
-    <img src="assets/images/automation/finalized-probe-pressmachine-real.jpeg" class="hero-slide" alt="Probe press automation">
-    <img src="assets/custom-dual-manifold.png" class="hero-slide" alt="Custom manifold">
-    <img src="assets/images/tooling/12-ouput-argon-manifold-real.jpeg" class="hero-slide" alt="Argon manifold">
-    <img src="assets/images/tooling/calibration-stand-assembly-closeup-real.jpeg" class="hero-slide" alt="Calibration stand">
-
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-slideshow">
+    <img
+      class="hero-slide active"
+      src="assets/images/automation/custom-active-cooling-assembly.png"
+      alt="Active cooling automation system"
+    />
+    <img
+      class="hero-slide"
+      src="assets/images/equipment/calibration-stand-assembly-withgraniteslab-forprecisionmeasuring-real.jpeg"
+      alt="Calibration stand precision equipment"
+    />
   </div>
+
+  <div class="hero-overlay">
+    <h1>Manufacturing, Tooling & Automation</h1>
+    <p>
+      We design and integrate practical manufacturing solutions —
+      from custom tooling to low-cost automation and facility systems.
+    </p>
+  </div>
+</section>
 
   <!-- Text Content BELOW image, left aligned -->
   <div class="hero-content container">
@@ -182,16 +191,19 @@
 </footer>
 
 <!-- Hero slideshow script -->
-  <script>
-    const slides = document.querySelectorAll('.hero-slide');
-    let currentSlide = 0;
+<script>
+  const slides = document.querySelectorAll(".hero-slide");
+  let currentSlide = 0;
 
+  if (slides.length > 1) {
     setInterval(() => {
-      slides[currentSlide].classList.remove('active');
+      slides[currentSlide].classList.remove("active");
       currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }, 6000); // change image every 6 seconds
-  </script>
+      slides[currentSlide].classList.add("active");
+    }, 5000);
+  }
+</script>
+
   
 <script>
 // Modal open/close
